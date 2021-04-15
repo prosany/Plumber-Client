@@ -42,7 +42,7 @@ const Reviews = () => {
             <div className="Box">
                 <h2>Testimonials</h2>
                 {
-                    reviews.map(review => <ReviewBody key={review.name} review={review}></ReviewBody>)
+                    reviews.map(review => <ReviewBody key={review.CustomerName} review={review}></ReviewBody>)
                 }
             </div>
         </div>

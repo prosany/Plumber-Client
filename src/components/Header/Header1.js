@@ -24,9 +24,13 @@ const Header1 = () => {
                             <li>
                                 <Link to="/"><span><FontAwesomeIcon icon={faPaperPlane} /></span>Contact Us</Link>
                             </li>
-                            <li>
+                            {
+                                user?.email ? <li>
+                                <Link to="/login" onClick={signOut}><span><FontAwesomeIcon icon={faUserCircle} /></span>SignOut</Link>
+                            </li> : <li>
                                 <Link to="/login"><span><FontAwesomeIcon icon={faUserCircle} /></span>Login</Link>
                             </li>
+                            }
                         </ul>
                     </div>
                 </div>

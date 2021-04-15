@@ -4,7 +4,8 @@
     border: 1px solid #f2f2f2;
     margin: 5px 1% 5px 1%;
     border-radius: 8px;
-    height: 160px;
+    height: 180px;
+    padding: 0px 10px;
 }
 .Review {
     display: flex;
@@ -32,6 +33,7 @@
 }
 .ReviewMessage p {
     color: #333;
+    text-align: justify;
 }
 
 .Rating {
@@ -40,4 +42,24 @@
 .Rating span {
     color: #f9d34a;
     margin: 0 1px 0 1px;
+}
+
+
+
+@media (max-width: 940px) {
+    .ReviewBody {
+        height: 200px;
+    }
+}
+@media (max-width: 830px) {
+    .ReviewBody {
+        width: 48%;
+        height: 190px;
+    }
+}
+@media (max-width: 520px) {
+    .ReviewBody {
+        width: 98%;
+        height: 170px;
+    }
 }
