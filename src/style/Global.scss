@@ -11,8 +11,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 .Box {
-    max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
+}
+a {
+    text-decoration: none;
 }
 
 
@@ -97,13 +100,89 @@ body {
 
 
 // WhyChooseUs Section
-.WhyChooseUs {
+.WhyChooseUs, .Services, .Reviews, .Blog {
     width: 100%;
     overflow: hidden;
     text-align: center;
     margin: 20px 0;
 }
-.WhyChooseUs h2 {
+.WhyChooseUs h2, .Services h2, .Reviews h2, .Blog h2 {
     font-weight: 700;
     text-transform: uppercase;
+    font-family: 'Mukta', sans-serif;
+    color: #464646;
+}
+
+
+
+
+
+.WhyChooseUs h2::after {
+    content: "WHY CHOOSE US";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.04);
+}
+.Services h2::after {
+    content: "OUR SERVICES";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.04);
+}
+.Reviews h2::after {
+    content: "BEST REVIEWS";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.04);
+}
+.Blog h2::after {
+    content: "LATEST BLOG";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.04);
+}
+
+
+
+
+
+
+// Responsive css
+@media (max-width: 600px) {
+    .WhyChooseUs h2::after {
+        content: "WHY CHOOSE US";
+        transform: translate(-50%, -84%);
+        font-size: 35px;
+    }
+    .Services h2::after {
+        content: "OUR SERVICES";
+        transform: translate(-50%, -84%);
+        font-size: 35px;
+    }
+    .Reviews h2::after {
+        content: "BEST REVIEWS";
+        transform: translate(-50%, -84%);
+        font-size: 35px;
+    }
+    .Blog h2::after {
+        content: "LATEST BLOG";
+        transform: translate(-50%, -84%);
+        font-size: 35px;
+    }
 }

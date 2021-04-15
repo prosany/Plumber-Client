@@ -1,4 +1,4 @@
-import './App.css';
+import React from 'react';
 import { AuthProvider } from './customHooks/useAuth';
 import {
   BrowserRouter as Router,
@@ -19,6 +19,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/about-us">
+            <h1>404 Not Found</h1>
           </Route>
         </Switch>
       </Router>

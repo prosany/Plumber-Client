@@ -1,0 +1,77 @@
+.Post {
+    width: 31%;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    float: left;
+    margin: 5px 1% 5px 1%;
+    position: relative;
+}
+.Post span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right,hsla(0, 96%, 21%, 0.5), hsla(0, 97%, 23%, 0.5), hsla(0, 93%, 30%, 0.5), hsla(0, 95%, 34%, 0.5));
+    padding: 8px 15px;
+    color: #fff;
+    border-radius: 8px 0 8px 0;
+    font-size: 12px;
+
+}
+.Post img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+}
+.Post a {
+    text-decoration: none;
+}
+.Post h3 {
+    color: #0c0a2c;
+    padding: 0 10px;
+}
+.Post p {
+    color: #888888;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+
+
+@media (max-width: 1110px) {
+    .Post {
+        height: 350px;
+    }
+    .Post h3 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 948px) {
+    .Post h3 {
+        line-height: 20px;
+    }
+}
+@media (max-width: 810px) {
+    .Post {
+        width: 48%;
+        height: 320px;
+    }
+}
+@media (max-width: 810px) {
+    .Post {
+        width: 48%;
+        height: 320px;
+    }
+    .Post img {
+        height: 170px;
+    }
+}
+@media (max-width: 525px) {
+    .Post {
+        width: 98%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .Post img {
+        height: 170px;
+    }
+}

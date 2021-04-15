@@ -1,0 +1,46 @@
+.OurServices {
+    width: 24%;
+    float: left;
+    margin: 10px .5% 0 .5%;
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+    height: 280px;
+    border-radius: 6px;
+}
+.OurServices span {
+    font-size: 25px;
+    color: #045e86;
+}
+.OurServices h3 {
+    color: #045e86;
+    text-transform: capitalize;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+}
+.OurServices p {
+    color: #555;
+    text-align: justify;
+}
+.PriceAndOrder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.PriceAndOrder > .Price {
+    float: left;
+}
+.PriceAndOrder > .Buy {
+    float: right;
+}
+
+
+button {
+    background: #045e86;
+    outline: none;
+    border: 0;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 6px;
+}

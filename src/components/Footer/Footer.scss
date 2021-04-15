@@ -1,0 +1,110 @@
+.Footer {
+    width: 100%;
+    background: linear-gradient(to right,#023467, #024771, #056D94, #048AA7);
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+
+.FooterAddress {
+    float: left;
+    width: 30%;
+}
+.FooterAddress h4 {
+    color: #fdfdfd;
+}
+
+.FooterCompany {
+    float: left;
+    width: 20%;
+}
+.FooterCompany h3, .FooterQuickLink h3, .FooterAbout h3 {
+    color: #fdfdfd;
+}
+
+
+
+
+.FooterUl {
+    list-style: none;
+}
+.FooterUl li {
+    display: block;
+}
+.FooterUl li a {
+    color: #fdfdfd;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 2px 0;
+    display: block;
+}
+
+
+
+
+.FooterQuickLink {
+    float: left;
+    width: 20%;
+}
+.FooterAbout {
+    float: left;
+    width: 30%;
+}
+.FooterAbout p {
+    color: #fdfdfd;
+}
+.FooterSocial {
+    margin: 5px 0;
+    text-align: center;
+}
+.FooterSocial span {
+    color: #fdfdfd;
+    margin: 0 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+@media (max-width: 940px) {
+    .FooterAddress {
+        width: 60%;
+        float: left;
+    }
+    .FooterCompany {
+        width: 40%;
+        float: left;
+    }
+    .FooterQuickLink {
+        width: 40%;
+        float: left;
+        margin-top: 10px;
+    }
+    .FooterAbout {
+        float: left;
+        width: 60%;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 515px) {
+    .FooterAddress {
+        width: 100%;
+        float: left;
+    }
+    .FooterCompany {
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+    }
+    .FooterQuickLink {
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+    }
+    .FooterAbout {
+        float: left;
+        width: 100%;
+        margin-top: 15px;
+    }
+}
