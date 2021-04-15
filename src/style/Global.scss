@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeSpeed;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
+.Box {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+// Home Page style
+.HeroBackground {
+    background: linear-gradient(to right,#023467, #024771, #056D94, #048AA7);
+    height: 400px;
+}
+.HeroText {
+    font-family: 'Mukta', sans-serif;
+    text-transform: uppercase;
+    float: left;
+    width: 60%;
+    padding: 25px 0 10px 0;
+}
+.HeroText > h1, h3 {
+    font-weight: 800;
+    color: #fff;
+    line-height: 35px;
+}
+.HeroText > h1 {
+    font-size: 50px;
+}
+.HeroText > h3 {
+    font-size: 30px;
+}
+.BigOffer {
+    margin: 20px 0 10px 0;
+}
+.BigOffer > h1 {
+    color: #f9d34a;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+.BigOffer > h1 > span {
+    color: #ebfbff;
+    font-size: 20px;
+}
+
+
+.Feature {
+    margin: 15px 0 10px 0;
+}
+.Feature ul {
+    list-style: none;
+}
+.Feature ul li {
+    color: #fff;
+    text-transform: capitalize;
+}
+.Feature ul li span {
+    color: #f9d34a;
+    margin-right: 8px;
+}
+
+
+.RequestAnApp {
+    margin: 15px 0 10px 0;
+}
+.RequestAnApp a {
+    background: #E4424D;
+    padding: 5px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-radius: 6px;
+}
+
+
+
+.HeroImage {
+    float: left;
+    width: 40%;
+    padding: 35px 0 10px 0;
+}
+.HeroImage img {
+    width: 80%;
+    height: auto;
+}
+
+
+
+
+// WhyChooseUs Section
+.WhyChooseUs {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px 0;
+}
+.WhyChooseUs h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+}

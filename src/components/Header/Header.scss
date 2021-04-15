@@ -1,0 +1,68 @@
+header {
+    width: 100%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+.HeaderLeft {
+    float: left;
+    width: 30%;
+}
+.HeaderLeft > a {
+    display: block;
+    padding: 8px 0;
+}
+.Logo {
+    background: url('../../images/logo-black.svg');
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 35px;
+    float: left;
+}
+
+
+.HeaderRight {
+    width: 70%;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+}
+.HeaderRight ul {
+    list-style: none;
+    float: right;
+}
+.HeaderRight ul li {
+    float: left;
+    font-size: 15px;
+    margin: 0 5px;
+}
+.HeaderRight ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.HeaderRight ul li a span {
+    margin-right: 8px;
+    color: #09273F;
+}
+
+nav {
+    background: #001e3c;
+    line-height: 45px;
+    overflow: hidden;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 15px;
+}
+nav ul li a:hover {
+    background: #03457F;
+}

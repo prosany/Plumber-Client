@@ -1,0 +1,23 @@
+.ChooseReasons {
+    width: 24%;
+    float: left;
+    margin: 10px .5% 10px .5%;
+    border: 1px solid #f1f1f1;
+    padding: 10px;
+    height: 190px;
+    border-radius: 6px;
+}
+.ChooseReasons span {
+    font-size: 25px;
+    color: #045e86;
+}
+.ChooseReasons h3 {
+    color: #045e86;
+    text-transform: uppercase;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
+}
+.ChooseReasons p {
+    color: #555;
+    text-align: justify;
+}
