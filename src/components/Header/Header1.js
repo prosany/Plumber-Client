@@ -3,10 +3,18 @@ import { Link } from "react-router-dom";
 import { useAuth } from '../../customHooks/useAuth';
 import './Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faInfoCircle, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane, faInfoCircle, faUserCircle, faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Header1 = () => {
     const { user, signOut } = useAuth() || {};
+    function navBar() {
+        const navBar = document.getElementById("MainMenu");
+        if (navBar.className === "HeaderRight") {
+            navBar.className = "HeaderRight_Responsive";
+        } else {
+            navBar.className = "HeaderRight";
+        }
+    };
     return (
         <>
             <header>
@@ -16,50 +24,39 @@ const Header1 = () => {
                             <div className="Logo"></div>
                         </Link>
                     </div>
-                    <div className="HeaderRight">
+                    <div className="HeaderRight" id="MainMenu">
                         <ul>
                             <li>
                                 <Link to="/"><span><FontAwesomeIcon icon={faInfoCircle} /></span>Support</Link>
                             </li>
                             <li>
-                                <Link to="/"><span><FontAwesomeIcon icon={faPaperPlane} /></span>Contact Us</Link>
+                                <Link to="/dashboard"><span><FontAwesomeIcon icon={faPaperPlane} /></span>Dashboard</Link>
                             </li>
                             {
                                 user?.email ? <li>
-                                <Link to="/login" onClick={signOut}><span><FontAwesomeIcon icon={faUserCircle} /></span>SignOut</Link>
-                            </li> : <li>
-                                <Link to="/login"><span><FontAwesomeIcon icon={faUserCircle} /></span>Login</Link>
-                            </li>
+                                    <Link to="/login" onClick={signOut}><span><FontAwesomeIcon icon={faUserCircle} /></span>SignOut</Link>
+                                </li> : <li>
+                                    <Link to="/login"><span><FontAwesomeIcon icon={faUserCircle} /></span>Login</Link>
+                                </li>
                             }
                         </ul>
+                    </div>
+                    <div className="NavBar">
+                        <span onClick={navBar}>
+                            <FontAwesomeIcon icon={faBars} />
+                        </span>
                     </div>
                 </div>
             </header>
             <nav>
                 <div className="Box">
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about-us">About Us</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Services</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Price</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Gallery</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Blog</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Shop</Link>
-                        </li>
-                    </ul>
+                    <Link to="/">Home</Link>
+                    <Link to="/about-us">About Us</Link>
+                    <Link to="/">Services</Link>
+                    <Link to="/">Price</Link>
+                    <Link to="/">Gallery</Link>
+                    <Link to="/">Blog</Link>
+                    <Link to="/">Shop</Link>
                 </div>
             </nav>
         </>

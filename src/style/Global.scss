@@ -19,6 +19,7 @@ a {
 }
 
 
+
 // Home Page style
 .HeroBackground {
     background: linear-gradient(to right,#023467, #024771, #056D94, #048AA7);
@@ -98,6 +99,107 @@ a {
 
 
 
+@media (max-width: 1265px) {
+    .HeroImage {
+        padding: 60px 0 10px 0;
+    }
+    .HeroImage img {
+        width: 100%;
+    }
+}
+@media (max-width: 985px) {
+    .HeroImage {
+        padding: 60px 0 10px 0;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 955px) {
+    .HeroBackground {
+        height: 360px;
+    }
+    .HeroText {
+        width: 55%;
+        overflow: hidden;
+    }
+    .HeroImage {
+        width: 45%;
+        padding: 40px 0 10px 0;
+        margin-top: 20px;
+    }
+    .HeroImage img {
+        width: 90%;
+    }
+    .HeroText > h1, h3 {
+        line-height: 25px;
+    }
+    .HeroText > h1 {
+        font-size: 35px;
+    }
+    .HeroText > h3 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 745px) {
+    .HeroBackground {
+        height: 360px;
+    }
+    .HeroText {
+        width: 55%;
+        overflow: hidden;
+    }
+    .HeroImage {
+        width: 45%;
+        overflow: hidden;
+    }
+    .BigOffer > h1 {
+        font-size: 20px;
+    }
+    .BigOffer > h1 > span {
+        color: #ebfbff;
+        font-size: 15px;
+    }
+}
+@media (max-width: 730px) {
+    .HeroBackground {
+        height: 340px;
+    }
+    .HeroText > h1, h3 {
+        line-height: 20px;
+    }
+    .HeroText > h1 {
+        font-size: 30px;
+    }
+    .HeroText > h3 {
+        font-size: 18px;
+    }
+}
+@media (max-width: 630px) {
+    .HeroBackground {
+        height: 660px;
+    }
+    .HeroText {
+        width: 100%;
+        overflow: hidden;
+    }
+    .HeroImage {
+        width: 100%;
+        padding: 10px 0 10px 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .HeroImage img {
+        width: 70%;
+    }
+}
+@media (max-width: 630px) {
+    .HeroBackground {
+        height: 610px;
+    }
+    .HeroImage img {
+        width: 80%;
+    }
+}
+
 
 // WhyChooseUs Section
 .WhyChooseUs, .Services, .Reviews, .Blog {
@@ -111,6 +213,8 @@ a {
     text-transform: uppercase;
     font-family: 'Mukta', sans-serif;
     color: #464646;
+    overflow: hidden;
+    margin: 10px 0;
 }
 
 
@@ -118,7 +222,7 @@ a {
 
 
 .WhyChooseUs h2::after {
-    content: "WHY CHOOSE US";
+    content: "WHY US";
     display: block;
     position: absolute;
     left: 50%;
@@ -164,25 +268,44 @@ a {
 
 
 // Responsive css
-@media (max-width: 600px) {
+@media (max-width: 665px) {
     .WhyChooseUs h2::after {
-        content: "WHY CHOOSE US";
-        transform: translate(-50%, -84%);
-        font-size: 35px;
+        transform: translate(-50%, -87%);
+        font-size: 32px;
     }
     .Services h2::after {
-        content: "OUR SERVICES";
-        transform: translate(-50%, -84%);
-        font-size: 35px;
+        transform: translate(-50%, -87%);
+        font-size: 32px;
     }
     .Reviews h2::after {
-        content: "BEST REVIEWS";
-        transform: translate(-50%, -90%);
-        font-size: 30px;
+        transform: translate(-50%, -87%);
+        font-size: 32px;
     }
     .Blog h2::after {
-        content: "LATEST BLOG";
-        transform: translate(-50%, -84%);
-        font-size: 35px;
+        transform: translate(-50%, -87%);
+        font-size: 32px;
     }
+}
+
+
+
+
+
+// Page Not Found
+.NotFound {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+.NotFound h1 {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
+    color: #023467;
+    margin-top: 10px;
+}
+.NotFound p {
+    color: #333;
+    margin-bottom: 10px;
 }

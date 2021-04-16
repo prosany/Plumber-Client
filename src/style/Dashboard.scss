@@ -1,0 +1,38 @@
+
+.WebsiteLogo {
+    width: 100%;
+    overflow: hidden;
+}
+.DashLogo {
+    background: url('../images/logo-white.svg');
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 35px;
+    float: left;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.SildeBar {
+    width: 20%;
+    height: 100vh;
+    float: left;
+    background: #023467;
+    overflow: hidden;
+}
+.MenuBar {
+    text-align: left;
+    overflow: hidden;
+}
+.MenuBar a {
+    color: #f3f4f5;
+    display: block;
+    padding: 10px 0;
+}
+.GoBackHome {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+}
+.GoBackHome a {
+    color: #f3f4f5;
+}

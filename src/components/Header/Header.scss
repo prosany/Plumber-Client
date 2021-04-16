@@ -44,18 +44,114 @@ header {
     color: #09273F;
 }
 
+
+
+.NavBar {
+    float: right;
+    width: 70%;
+    text-align: right;
+    line-height: 54px;
+    display: none;
+}
+
+.NavBar>span {
+    color: #111111;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+    .HeaderRight {
+        display: none;
+    }
+    .NavBar {
+        display: block;
+    }
+
+    .HeaderRight_Responsive {
+        position: absolute;
+        left: 0;
+        margin-top: 54px;
+        height: 100vh;
+        background: rgb(255, 255, 255);
+        width: 100%;
+        z-index: 99999;
+        border-top: 1px solid #e6e6e6;
+    }
+
+    .HeaderRight_Responsive ul {
+        list-style: none;
+    }
+
+    .HeaderRight_Responsive ul li {
+        margin: 2px 0;
+    }
+
+    .HeaderRight_Responsive ul li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        padding: 15px 10px;
+        text-align: center;
+        border-bottom: 1px solid #ececec;
+        font-size: 14px;
+    }
+    .HeaderRight_Responsive ul li a span {
+        margin-right: 8px;
+        color: #09273F;
+    }
+
+    .HeaderRight_Responsive ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .HeaderRight_Responsive ul li a:hover {
+        background-color: #f3f3f3;
+    }
+}
+
+@media (min-width: 768px) {
+    .HeaderRight_Responsive {
+        width: 70%;
+        height: 50px;
+        line-height: 50px;
+        float: left;
+    }
+    .HeaderRight_Responsive ul {
+        list-style: none;
+        float: right;
+    }
+    .HeaderRight_Responsive ul li {
+        float: left;
+        font-size: 15px;
+        margin: 0 5px;
+    }
+    .HeaderRight_Responsive ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+    .HeaderRight_Responsive ul li a span {
+        margin-right: 8px;
+        color: #09273F;
+    }
+}
+
+
+
+
+
+
+
+
+
 nav {
     background: #001e3c;
     line-height: 45px;
     overflow: hidden;
 }
-nav ul {
-    list-style: none;
-}
-nav ul li {
-    float: left;
-}
-nav ul li a {
+nav a {
     color: #fff;
     font-size: 14px;
     text-decoration: none;
@@ -63,6 +159,15 @@ nav ul li a {
     display: inline-block;
     padding: 0 15px;
 }
-nav ul li a:hover {
+nav a:hover {
     background: #03457F;
+}
+
+
+@media (max-width: 720px) {
+    nav {
+        list-style: none;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
 }

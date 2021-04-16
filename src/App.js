@@ -8,6 +8,8 @@ import {
 import './style/Global.scss';
 import Home from './pages/Home';
 import Login from './components/Login/Login';
+import NotFound from './pages/NotFound';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -20,8 +22,15 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/dashboard/book/:id"></Route>
           <Route path="/about-us">
-            <h1>404 Not Found</h1>
+            <NotFound />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </Router>

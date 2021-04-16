@@ -44,3 +44,41 @@ button {
     cursor: pointer;
     border-radius: 6px;
 }
+
+
+@media (max-width: 1240px) {
+    .OurServices {
+        height: 300px;
+    }
+}
+@media (max-width: 950px) {
+    .OurServices {
+        width: 32%;
+    }
+}
+@media (max-width: 950px) {
+    .OurServices {
+        height: 310px;
+    }
+    .OurServices h3 {
+        line-height: 20px;
+        margin: 10px 0;
+    }
+}
+@media (max-width: 695px) {
+    .OurServices {
+        width: 49%;
+        height: 290px;
+    }
+}
+@media (max-width: 610px) {
+    .OurServices {
+        height: 310px;
+    }
+}
+@media (max-width: 500px) {
+    .OurServices {
+        width: 99%;
+        height: 280px;
+    }
+}

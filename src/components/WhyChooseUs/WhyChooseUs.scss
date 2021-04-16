@@ -21,3 +21,37 @@
     color: #555;
     text-align: justify;
 }
+
+
+@media (max-width: 1230px) {
+    .ChooseReasons {
+        height: 210px;
+    }
+}
+@media (max-width: 1125px) {
+    .ChooseReasons {
+        height: 230px;
+    }
+    .ChooseReasons h3 {
+        line-height: 20px;
+        margin: 10px 0;
+    }
+}
+@media (max-width: 1085px) {
+    .ChooseReasons {
+        width: 32%;
+        height: 200px;
+    }
+}
+@media (max-width: 900px) {
+    .ChooseReasons {
+        width: 49%;
+        height: 200px;
+    }
+}
+@media (max-width: 570px) {
+    .ChooseReasons {
+        width: 99%;
+        height: 200px;
+    }
+}
