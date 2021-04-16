@@ -20,9 +20,9 @@ const Header1 = () => {
             <header>
                 <div className="Box">
                     <div className="HeaderLeft">
-                        <Link to='/'>
+                        <a href="/" title="Home - Reload Page">
                             <div className="Logo"></div>
-                        </Link>
+                        </a>
                     </div>
                     <div className="HeaderRight" id="MainMenu">
                         <ul>

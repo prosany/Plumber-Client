@@ -3,6 +3,7 @@ import "firebase/auth";
 import firebaseConfig from '../firebaseConfig';
 import React, { useState, createContext, useContext } from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import { useEffect } from "react";
 
 
 if (!firebase.apps.length) {
@@ -52,16 +53,15 @@ export const Auth = () => {
 
   const [user, setUser] = useState({});
   const [error, setError] = useState(null);
-  const [authToken, setAuthToken] = useState(null)
+  const [authToken, setAuthToken] = useState(null);
+
   const storeAuthToken = () => {
-    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+    firebase.auth().currentUser.getIdToken(true)
       .then(function (idToken) {
-        console.log("token", idToken);
+        // console.log("token", idToken);
         setAuthToken(idToken)
-        // Send token to your backend via HTTPS
-        // ...
       }).catch(function (error) {
-        // Handle error
+        console.log('Token Collection fail.')
       });
   }
 
@@ -76,6 +76,55 @@ export const Auth = () => {
     });
   }, [])
 
+
+  // Check User on Database and Insert New User
+  const [verifyEmail, setVerifyEmail] = useState(false);
+  const [verifyStatus, setVerifyStatus] = useState([]);
+
+  useEffect(() => {
+    if (verifyEmail === false) {
+      // console.log('No Error Dise')
+    } else {
+      console.log('Asci')
+      fetch(`https://plumbing-com.herokuapp.com/verify-email-address?email=` + user?.email)
+        .then(res => res.json())
+        .then(data => {
+          if (data) {
+            setVerifyStatus(data[0])
+          } else {
+            console.log("Nothing")
+          }
+        })
+    }
+  }, [verifyEmail]);
+
+  // Insert New User
+  useEffect(() => {
+    if (verifyStatus?.email === user?.email && verifyEmail === true) {
+      // console.log(verifyStatus?.email, user.email, 'Kori Nai Vai')
+    } else if (verifyStatus?.email !== user.email && verifyEmail == true) {
+      const newUserDetails = { ...user, permission: 'customer' };
+      const url = `https://plumbing-com.herokuapp.com/addNewUser`;
+      fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newUserDetails)
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (true) {
+            console.log(data)
+          } else {
+            console.log('Fail');
+          }
+        })
+    }
+    else {
+      // console.log(verifyStatus?.email, user.email, 'Kicu Kori Nai Vai')
+    }
+  }, [verifyStatus]);
+
+
   const googleSignIn = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
 
@@ -83,13 +132,12 @@ export const Auth = () => {
       .signInWithPopup(provider)
       .then((result) => {
         var user = result.user;
-        setUser({ name: user.displayName, email: user.email })
+        setUser({ name: user.displayName, email: user.email });
+        setVerifyEmail(true);
         window.history.back();
-
         storeAuthToken()
 
       }).catch((error) => {
-        // Handle Errors here.
         const errorMessage = error.message;
         setError(errorMessage)
       });
@@ -102,8 +150,7 @@ export const Auth = () => {
 
       console.log("Sign out");
     }).catch((error) => {
-      // An error happened.
-      console.log("Error khaisi");
+      console.log("Failed To SignOut");
     });
 
   }
