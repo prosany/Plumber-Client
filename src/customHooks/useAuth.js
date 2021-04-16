@@ -69,7 +69,7 @@ export const Auth = () => {
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
         storeAuthToken();
-        setUser({ name: user.displayName, email: user.email })
+        setUser({ name: user.displayName, email: user.email, photo: user.photoURL })
       } else {
         setUser(null)
       }
@@ -132,7 +132,7 @@ export const Auth = () => {
       .signInWithPopup(provider)
       .then((result) => {
         var user = result.user;
-        setUser({ name: user.displayName, email: user.email });
+        setUser({ name: user.displayName, email: user.email, photo: user.photoURL });
         setVerifyEmail(true);
         window.history.back();
         storeAuthToken()

@@ -34,7 +34,7 @@ const Header1 = () => {
                             </li>
                             {
                                 user?.email ? <li>
-                                    <Link to="/login" onClick={signOut}><span><FontAwesomeIcon icon={faUserCircle} /></span>SignOut</Link>
+                                    <Link to="/" onClick={signOut}><span><FontAwesomeIcon icon={faUserCircle} /></span>SignOut</Link>
                                 </li> : <li>
                                     <Link to="/login"><span><FontAwesomeIcon icon={faUserCircle} /></span>Login</Link>
                                 </li>

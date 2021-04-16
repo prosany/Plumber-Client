@@ -1,6 +1,11 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
 const ServiceArea = ({ service }) => {
+    const history = useHistory();
+    const orderNow = () => {
+        history.push(`/dashboard/order/${service._id}`);
+    }
     return (
         <>
             <div className="OurServices">
@@ -12,7 +17,7 @@ const ServiceArea = ({ service }) => {
                         <h3>${service?.price}</h3>
                     </div>
                     <div className="Buy">
-                        <button>Buy Now</button>
+                        <button onClick={orderNow}>Order Now</button>
                     </div>
                 </div>
             </div>

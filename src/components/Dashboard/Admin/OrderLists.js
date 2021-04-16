@@ -1,9 +1,11 @@
 import React from 'react';
+import { useAuth } from '../../../customHooks/useAuth';
 
 const OrderList = () => {
+    const { user } = useAuth() || {};
     return (
         <div>
-            Admin Order
+            Admin Order {user.name}
         </div>
     );
 };

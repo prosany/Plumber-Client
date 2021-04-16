@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthProvider } from './customHooks/useAuth';
+import { AuthProvider, PrivateRoute } from './customHooks/useAuth';
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,10 +22,10 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard />
-          </Route>
-          <Route path="/dashboard/book/:id"></Route>
+          </PrivateRoute>
+          <Route path="/dashboard/order/:id"></Route>
           <Route path="/about-us">
             <NotFound />
           </Route>
