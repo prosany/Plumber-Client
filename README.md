@@ -1,6 +1,6 @@
 # Plumbing.Com - Plumbing Services!
 
-This is Plumbing Service website project. [Plumbing.Com](https://plumbing-com.web.app/) offers Plumbing Services.
+This is Plumbing Service website project. [Plumbing.Com](https://plumbing-com.web.app/) offers Plumbing Services, Customer Can Order Any Service.
 
 ## Live Website Link
 
@@ -16,6 +16,7 @@ This is Plumbing Service website project. [Plumbing.Com](https://plumbing-com.we
 6. Firebase `(For User Login)`
 7. MongoDB `(For Database)`
 8. ImgBB `(For Image Hosting)`
+9. Stripe (Dev) `(For Payments)`
 
 ## Installation Guide
 ### **SETPS**
