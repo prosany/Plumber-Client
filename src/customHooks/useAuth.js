@@ -2,7 +2,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from '../firebaseConfig';
 import React, { useState, createContext, useContext } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, useHistory, useLocation } from 'react-router-dom';
 import { useEffect } from "react";
 
 
@@ -123,7 +123,6 @@ export const Auth = () => {
       // console.log(verifyStatus?.email, user.email, 'Kicu Kori Nai Vai')
     }
   }, [verifyStatus]);
-
 
   const googleSignIn = () => {
     const provider = new firebase.auth.GoogleAuthProvider();

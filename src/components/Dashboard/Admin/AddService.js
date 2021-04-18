@@ -3,6 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
+import './Admin.scss';
 
 const AddService = () => {
     const [serviceImg, setServiceImg] = useState('');
@@ -48,20 +49,23 @@ const AddService = () => {
                 console.log(error);
             });
     }
+    console.log(process.env)
     return (
-        <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input placeholder="Service Name" name="name" {...register("name")} />
-                <input placeholder="Des" name="description" {...register("description")} />
-                <input name="price" placeholder="Price" {...register("price", { required: true })} />
-                {errors.exampleRequired && <span>This field is required</span>}
-                <label htmlFor="ProductImage">Product Image</label><br />
-                <input id="ProductImage" name="exampleRequired" type="file" onChange={handleProductImageUpload} />
-                <div className="ImageUploadPreview">
-                    {serviceImg ? <div className="Deff"><img src={serviceImg} alt="Upload Success" /><p>Upload Success</p></div> : <div className="Deff"><img src="https://i.ibb.co/S7bxDjK/img-Preview.png" alt="No Image Uploaded Yet" /><p>No Image Uploaded Yet</p> </div>}
-                </div>
-                <input type="submit" value="Add Product" />
-            </form>
+        <div className="Details">
+            <div className="Box">
+                <form className="AddServiceForm" onSubmit={handleSubmit(onSubmit)}>
+                    <input placeholder="Service Name" name="name" {...register("name")} />
+                    <input placeholder="Des" name="description" {...register("description")} />
+                    <input name="price" placeholder="Price" {...register("price", { required: true })} />
+                    {errors.exampleRequired && <span>This field is required</span>}
+                    <label htmlFor="ProductImage">Product Image</label><br />
+                    <input id="ProductImage" name="exampleRequired" type="file" onChange={handleProductImageUpload} />
+                    <div className="ImageUploadPreview">
+                        {serviceImg ? <div className="Deff"><img src={serviceImg} alt="Upload Success" /><p>Upload Success</p></div> : <div className="Deff"><img src="https://i.ibb.co/S7bxDjK/img-Preview.png" alt="No Image Uploaded Yet" /><p>No Image Uploaded Yet</p> </div>}
+                    </div>
+                    <button type="submit">Add New Service</button>
+                </form>
+            </div>
         </div>
     );
 };

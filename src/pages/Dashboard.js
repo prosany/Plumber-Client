@@ -7,12 +7,16 @@ import AddService from '../components/Dashboard/Admin/AddService';
 import MakeAdmin from '../components/Dashboard/Admin/MakeAdmin';
 import ManageService from '../components/Dashboard/Admin/ManageService';
 import OrderLists from '../components/Dashboard/Admin/OrderLists';
+import EmptyCard from '../components/Dashboard/Customer/EmptyCard';
 import OrderList from '../components/Dashboard/Customer/OrderList';
 import Reviews from '../components/Dashboard/Customer/Reviews';
 import Order from '../components/Dashboard/Order';
+import Header2 from '../components/Header/Header2';
 import { AuthProvider, useAuth } from '../customHooks/useAuth';
 import '../style/Dashboard.scss';
 import '../style/Global.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faListOl, faPlus, faPencilAlt, faUserShield, faShoppingCart, faCommentDots, faHome, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
@@ -30,7 +34,6 @@ const Dashboard = () => {
                 }
             })
     }, [user]);
-    console.log(user.email, verifyStatus?.email)
 
     return (
         <AuthProvider>
@@ -45,24 +48,27 @@ const Dashboard = () => {
                         </div>
                         <div className="MenuBar">
                             {verifyStatus?.permission === 'admin' ? <>
-                                <Link to={`${url}/order-lists`}>Order List</Link>
-                                <Link to={`${url}/add-service`}>Add Service</Link>
-                                <Link to={`${url}/manage-service`}>Manage Service</Link>
-                                <Link to={`${url}/user-management`}>User Settings</Link>
+                                <Link to={`${url}/order-lists`}><span><FontAwesomeIcon icon={faListOl} /></span>Order List</Link>
+                                <Link to={`${url}/add-service`}><span><FontAwesomeIcon icon={faPlus} /></span>Add Service</Link>
+                                <Link to={`${url}/manage-service`}><span><FontAwesomeIcon icon={faPencilAlt} /></span>Manage Service</Link>
+                                <Link to={`${url}/user-management`}><span><FontAwesomeIcon icon={faUserShield} /></span>User Settings</Link>
                             </> : ''}
                             {verifyStatus?.permission === 'customer' ? <>
-                                <Link to={`${url}/order`}>Order</Link>
-                                <Link to={`${url}/order-list`}>Order List</Link>
-                                <Link to={`${url}/review`}>Review</Link>
+                                <Link to={`${url}/cart`}><span><FontAwesomeIcon icon={faShoppingCart} /></span>Cart</Link>
+                                <Link to={`${url}/order-list`}><span><FontAwesomeIcon icon={faListOl} /></span>Order List</Link>
+                                <Link to={`${url}/review`}><span><FontAwesomeIcon icon={faCommentDots} /></span>Review</Link>
                             </> : ''}
                         </div>
                         <div className="GoBackHome">
-                            <h3>Quick Link</h3>
-                            <Link to="/">Home Page</Link>
+                            <h3><span><FontAwesomeIcon icon={faExclamationTriangle} /></span>Quick Link</h3>
+                            <Link to="/"><span><FontAwesomeIcon icon={faHome} /></span>Home Page</Link>
                         </div>
                     </div>
                 </div>
-                <div className="Details"></div>
+                <div className="Details">
+                    <Header2 />
+                    <br/>
+                </div>
             </main>
             <Switch>
                 <Route exact path={path}>
@@ -78,6 +84,9 @@ const Dashboard = () => {
                 </Route>
                 <Route path={`${path}/user-management`}>
                     <MakeAdmin />
+                </Route>
+                <Route path={`${path}/cart`}>
+                    <EmptyCard />
                 </Route>
                 <Route path={`${path}/order/:id`}>
                     <Order />

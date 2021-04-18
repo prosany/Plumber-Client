@@ -20,9 +20,9 @@ const Header1 = () => {
             <header>
                 <div className="Box">
                     <div className="HeaderLeft">
-                        <a href="/" title="Home - Reload Page">
+                        <Link to="/" title="Home - Reload Page">
                             <div className="Logo"></div>
-                        </a>
+                        </Link>
                     </div>
                     <div className="HeaderRight" id="MainMenu">
                         <ul>
@@ -34,7 +34,7 @@ const Header1 = () => {
                             </li>
                             {
                                 user?.email ? <li>
-                                    <Link to="/" onClick={signOut}><span><FontAwesomeIcon icon={faUserCircle} /></span>SignOut</Link>
+                                    <a href="/" onClick={signOut}><span><FontAwesomeIcon icon={faUserCircle} /></span>SignOut</a>
                                 </li> : <li>
                                     <Link to="/login"><span><FontAwesomeIcon icon={faUserCircle} /></span>Login</Link>
                                 </li>

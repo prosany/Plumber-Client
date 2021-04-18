@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Rating from '@material-ui/lab/Rating';
+import Box from '@material-ui/core/Box';
 
 const ReviewBody = ({ review }) => {
     return (
@@ -12,19 +12,15 @@ const ReviewBody = ({ review }) => {
                     </div>
                     <div className="CustomerName">
                         <h3>{review?.CustomerName}</h3>
-                        <span>Customer</span>
+                        <span>{review?.company}</span>
                     </div>
                 </div>
                 <div className="ReviewMessage">
                     <p>{review?.description}</p>
                 </div>
-                <div className="Rating">
-                    <span><FontAwesomeIcon icon={faStar} /></span>
-                    <span><FontAwesomeIcon icon={faStar} /></span>
-                    <span><FontAwesomeIcon icon={faStar} /></span>
-                    <span><FontAwesomeIcon icon={faStar} /></span>
-                    <span><FontAwesomeIcon icon={faStar} /></span>
-                </div>
+                <Box className="mt-2" component="fieldset" borderColor="transparent">
+                    <Rating name="read-only" value={review?.rating} readOnly />
+                </Box>
             </div>
         </>
     );

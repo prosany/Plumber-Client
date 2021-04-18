@@ -6,20 +6,20 @@
     padding: 10px;
     height: 280px;
     border-radius: 6px;
-}
-.OurServices span {
-    font-size: 25px;
-    color: #045e86;
-}
-.OurServices h3 {
-    color: #045e86;
-    text-transform: capitalize;
-    font-family: 'Mukta', sans-serif;
-    font-weight: 500;
-}
-.OurServices p {
-    color: #555;
-    text-align: justify;
+    span {
+        font-size: 25px;
+        color: #045e86;
+    }
+    h3 {
+        color: #045e86;
+        text-transform: capitalize;
+        font-family: 'Mukta', sans-serif;
+        font-weight: 500;
+    }
+    p {
+        color: #555;
+        text-align: justify;
+    }
 }
 .PriceAndOrder {
     display: flex;
@@ -43,6 +43,7 @@ button {
     margin: 10px 0;
     cursor: pointer;
     border-radius: 6px;
+    font-family: 'Lato', sans-serif;
 }
 
 

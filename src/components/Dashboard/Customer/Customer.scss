@@ -1,0 +1,161 @@
+.TotalOrderCount {
+    color: #333;
+}
+
+.UserCurrentOrderList {
+    width: 32%;
+    float: left;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+    overflow: hidden;
+    margin: 5px .5%;
+    padding: 10px 15px;
+    height: 200px;
+
+    .CurrentList {
+        display: flex;
+        justify-content: space-between;
+
+        .CurrentListImage img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .CurrentStatusPending {
+            margin-top: 5px;
+        }
+
+        .CurrentStatusPending span {
+            padding: 5px 6px;
+            background: #ff686873;
+            color: #670000;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .CurrentStatusHold {
+            margin-top: 5px;
+        }
+
+        .CurrentStatusHold span {
+            padding: 5px 6px;
+            background: #fff56873;
+            color: #807300;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+
+        .CurrentStatusDone {
+            margin-top: 5px;
+        }
+
+        .CurrentStatusDone span {
+            padding: 5px 6px;
+            background: #6dff6873;
+            color: #186700;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+    }
+
+    .CurrentPDName {
+        h3 {
+            color: #305477;
+        }
+    }
+
+    .CurrentPDDes {
+        p {
+            text-align: justify;
+        }
+    }
+
+    .PaymentBy {
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+        font-size: 13px;
+    }
+}
+
+
+
+.ReviewHead {
+    color: #6b7c93;
+    font-size: 20px;
+}
+
+.ReviewForm {
+    width: 100%;
+    
+    label {
+        color: #6b7c93;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.025em;
+    }
+
+    .MuiRating-label {
+        color: #ecba00;
+        font-weight: 400;
+        font-size: 25px;
+        letter-spacing: 0.025em;
+    }
+
+    button {
+        background: #045e86;
+        outline: none;
+        border: 0;
+        color: #fff;
+        padding: 10px 15px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 6px;
+        font-family: 'Lato', sans-serif;
+    }
+
+    button:hover {
+        color: #fff;
+        cursor: pointer;
+        background-color: #045e86;
+        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    input,
+    textarea {
+        display: block;
+        margin: 8px 0 20px 0;
+        min-width: 50%;
+        max-width: 100%;
+        padding: 8px 14px;
+        font-size: 16px;
+        font-family: "Source Code Pro", monospace;
+        border: 1px solid #cccccc;
+        outline: 0;
+        border-radius: 8px;
+        background: white;
+    }
+
+    input::placeholder {
+        color: #aab7c4;
+    }
+
+    input:focus,
+    .StripeElement--focus {
+        box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px,
+            rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+        -webkit-transition: all 150ms ease;
+        border: 1px solid #e2e2e2;
+        transition: all 150ms ease;
+    }
+}
+.FormError {
+    color: #cf0000;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 0px;
+    margin-top: -5px 0;
+    display: block;
+}

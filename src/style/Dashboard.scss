@@ -1,38 +1,66 @@
-
 .WebsiteLogo {
     width: 100%;
     overflow: hidden;
 }
+
 .DashLogo {
     background: url('../images/logo-white.svg');
     background-repeat: no-repeat;
     width: 140px;
     height: 35px;
     float: left;
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
     overflow: hidden;
 }
+
 .SildeBar {
-    width: 20%;
-    height: 100vh;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
     float: left;
-    background: #023467;
-    overflow: hidden;
+    width: 250px;
+    background: #171717;
 }
+
 .MenuBar {
     text-align: left;
     overflow: hidden;
 }
+
 .MenuBar a {
     color: #f3f4f5;
     display: block;
     padding: 10px 0;
 }
+.MenuBar a span {
+    margin-right: 8px;
+    font-size: 15px;
+}
+
 .GoBackHome {
     position: absolute;
     bottom: 20px;
     left: 15px;
 }
+
 .GoBackHome a {
     color: #f3f4f5;
+}
+.GoBackHome span {
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+.Details {
+    margin-left: 250px;
+    height: auto;
+}
+
+.Empty {
+    h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #6b7c93;
+    }
 }

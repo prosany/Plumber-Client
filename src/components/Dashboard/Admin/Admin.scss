@@ -1,0 +1,124 @@
+.AddServiceForm, .MakeAdminForm {
+    width: 100%;
+
+    label {
+        color: #6b7c93;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0.025em;
+    }
+
+    .MuiRating-label {
+        color: #ecba00;
+        font-weight: 400;
+        font-size: 25px;
+        letter-spacing: 0.025em;
+    }
+
+    button {
+        background: #045e86;
+        outline: none;
+        border: 0;
+        color: #fff;
+        padding: 10px 15px;
+        margin: 10px 0;
+        cursor: pointer;
+        border-radius: 6px;
+        font-family: 'Lato', sans-serif;
+    }
+
+    button:hover {
+        color: #fff;
+        cursor: pointer;
+        background-color: #045e86;
+        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    input,
+    textarea {
+        display: block;
+        margin: 8px 0 20px 0;
+        min-width: 50%;
+        max-width: 100%;
+        padding: 8px 14px;
+        font-size: 16px;
+        font-family: "Source Code Pro", monospace;
+        border: 1px solid #cccccc;
+        outline: 0;
+        border-radius: 8px;
+        background: white;
+    }
+
+    input::placeholder {
+        color: #aab7c4;
+    }
+
+    input:focus,
+    .StripeElement--focus {
+        box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px,
+            rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+        -webkit-transition: all 150ms ease;
+        border: 1px solid #e2e2e2;
+        transition: all 150ms ease;
+    }
+    .FormError {
+        color: #cf0000;
+        font-size: 14px;
+        font-style: italic;
+        line-height: 0px;
+        margin: -5px 0 6px 0;
+        display: block;
+    }
+}
+
+
+
+// Order Lists
+.OrdersLists {
+    width: 100%;
+    overflow: hidden;
+
+    .OListLi {
+        list-style: none;
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        border-top: 1px solid #f2f2f2;
+        border-left: 1px solid #f2f2f2;
+        border-right: 1px solid #f2f2f2;
+
+        li {
+            float: left;
+            padding: 10px 5px;
+            text-align: center;
+            border-bottom: none;
+        }
+
+        li:first-child {
+            width: 17%;
+            border-right: 1px solid #f2f2f2;
+        }
+
+        li:nth-child(2) {
+            width: 32%;
+            border-right: 1px solid #f2f2f2;
+        }
+
+        li:nth-child(3) {
+            width: 27%;
+            border-right: 1px solid #f2f2f2;
+        }
+
+        li:nth-child(4) {
+            width: 12%;
+            border-right: 1px solid #f2f2f2;
+        }
+
+        li:last-child {
+            width: 12%;
+        }
+    }
+    .OListLi:last-child {
+        border-bottom: 1px solid #f2f2f2;
+    }
+}

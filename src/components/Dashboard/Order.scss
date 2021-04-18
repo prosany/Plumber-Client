@@ -1,0 +1,82 @@
+.PayLeft {
+  width: 50%;
+  float: left;
+
+  h3 {
+    color: #6b7c93;
+    font-size: 20px;
+  }
+}
+
+.PayRight {
+  width: 50%;
+  float: left;
+
+  h3 {
+    color: #6b7c93;
+    font-size: 20px;
+  }
+}
+
+.PaymentForm label {
+  color: #6b7c93;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.025em;
+
+  button {
+    background: #045e86;
+    outline: none;
+    border: 0;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  button:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #045e86;
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  input,
+  .StripeElement {
+    display: block;
+    margin: 8px 0 20px 0;
+    max-width: 90%;
+    padding: 8px 14px;
+    font-size: 16px;
+    font-family: "Source Code Pro", monospace;
+    border: 1px solid #f2f2f2;
+    outline: 0;
+    border-radius: 8px;
+    background: white;
+  }
+
+  input::placeholder {
+    color: #aab7c4;
+  }
+
+  input:focus,
+  .StripeElement--focus {
+    box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px,
+      rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+  }
+}
+
+
+.StripeElement.IdealBankElement,
+.StripeElement.FpxBankElement,
+.StripeElement.PaymentRequestButton {
+  padding: 0;
+}
+
+.StripeElement.PaymentRequestButton {
+  height: 20px;
+}
