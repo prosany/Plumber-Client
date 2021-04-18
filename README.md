@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Plumbing.Com - Plumbing Services!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is Plumbing Service website project. [Plumbing.Com](https://plumbing-com.web.app/) offers Plumbing Services, Customer Can Order Any Service.
 
-## Available Scripts
+## Live Website Link
 
-In the project directory, you can run:
+[Plumbing.Com](https://plumbing-com.web.app/)
 
-### `npm start`
+## Technology Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. React
+2. React Router
+3. HTML5, CSS3
+4. JavaScript
+5. React Hook Form
+6. Firebase `(For User Login)`
+7. MongoDB `(For Database)`
+8. ImgBB `(For Image Hosting)`
+9. Stripe (Dev) `(For Payments)`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## API's I Have Made
 
-### `npm test`
+- https://plumbing-com.herokuapp.com/verify-email-address?email=email@email.com `(For Verify User Email From Database)`
+- https://plumbing-com.herokuapp.com/addNewUser `(Create User Automatically if new and Save on DB)`
+- https://plumbing-com.herokuapp.com/addService `(Save New Service on database)`
+- https://plumbing-com.herokuapp.com/services `(Get Service from database)`
+- https://plumbing-com.herokuapp.com/order/:id `(Get Order Details from Database using ID)`
+- https://plumbing-com.herokuapp.com/confirmOrder `(Confirm Order)`
+- https://plumbing-com.herokuapp.com/orderList `(Get Orders By Email from Database)`
+- https://plumbing-com.herokuapp.com/orders `(Get Order Details from Database)`
+- https://plumbing-com.herokuapp.com/addReview `(Save Review on database)`
+- https://plumbing-com.herokuapp.com/reviews `(Get Reviews from database)`
+- https://plumbing-com.herokuapp.com/makeAdmin `(Make New Admin)`
+- https://plumbing-com.herokuapp.com/updateStatus/:id `(Update Order Status)`
+- https://plumbing-com.herokuapp.com/manageService/:id `(Manage Services)`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Installation Guide
+### **SETPS**
+    1. npx create reactapp `App Name`
+    2. Code . `For Open in VS Code, You can skip this step if you want`
+    3. npm install
+    4. Done. You're ready to go
+  
+### Thanks
