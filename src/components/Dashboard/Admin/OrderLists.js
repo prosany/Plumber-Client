@@ -1,22 +1,69 @@
 import React, { useEffect, useState } from 'react';
+import { useAuth } from '../../../customHooks/useAuth';
 import OrdersData from './OrdersData';
 
 const OrderList = () => {
+    document.title = 'Order List | Dashboard';
+    const { authToken } = useAuth() || {};
     const [ordersList, setOrdersList] = useState([]);
+    const [updatedValue, setUpdatedValue] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:8080/orders')
+        fetch('https://plumbing-com.herokuapp.com/orders', {
+            headers: {
+                "authorization": authToken
+            }
+        })
             .then(res => res.json())
             .then(data => {
                 setOrdersList(data)
-               
+                setUpdatedValue(false)
+                console.log('Fetch', data)
             })
-    }, [])
-    console.log(ordersList)
+    }, [updatedValue])
+
+    console.log('Id Token', authToken)
+    const [state, setState] = React.useState({
+        status: ''
+    });
+
+    const handleChange = (event) => {
+        const name = event.target.name;
+        setState({
+            ...state,
+            [name]: event.target.value,
+        });
+    };
+    const handleUpdate = (id) => {
+        const updatedStatus = state.status;
+        setState({
+            status: ''
+        })
+        const updateNewStatus = {
+            id,
+            updatedStatus
+        }
+        if (updatedStatus) {
+            fetch(`https://plumbing-com.herokuapp.com/updateStatus/${id}`,
+                {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(updateNewStatus)
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data) {
+                        setUpdatedValue(true)
+                    }
+                    console.log(data)
+                })
+        }
+        console.log(updateNewStatus)
+    }
     return (
         <div className="Details">
             <div className="Box">
-                <h2>Total Order: {ordersList?.length}</h2>
+                <h3 style={{ color: '#6b7c93' }}>Total Order: {ordersList?.length}</h3>
                 <div className="OrdersLists">
                     <ul className="OListLi">
                         <li>Name</li>
@@ -25,10 +72,10 @@ const OrderList = () => {
                         <li>Payment with</li>
                         <li>Status</li>
                     </ul>
-                    {ordersList.map(allOrdersList => <OrdersData key={allOrdersList._id} allOrdersList={allOrdersList}></OrdersData>)}
+                    {ordersList.map(allOrdersList => <OrdersData handleUpdate={handleUpdate} key={allOrdersList._id} handleChange={handleChange} allOrdersList={allOrdersList}></OrdersData>)}
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

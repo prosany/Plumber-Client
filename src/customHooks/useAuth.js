@@ -86,7 +86,11 @@ export const Auth = () => {
       // console.log('No Error Dise')
     } else {
       console.log('Asci')
-      fetch(`https://plumbing-com.herokuapp.com/verify-email-address?email=` + user?.email)
+      fetch(`https://plumbing-com.herokuapp.com/verify-email-address?email=` + user?.email, {
+        headers: {
+          "authorization": authToken
+        }
+      })
         .then(res => res.json())
         .then(data => {
           if (data) {

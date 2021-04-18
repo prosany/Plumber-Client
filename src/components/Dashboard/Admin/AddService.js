@@ -6,7 +6,9 @@ import { useHistory } from 'react-router';
 import './Admin.scss';
 
 const AddService = () => {
+    document.title = 'Add New Services | Dashboard';
     const [serviceImg, setServiceImg] = useState('');
+    const history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         const eventData = {
@@ -16,7 +18,7 @@ const AddService = () => {
             image: serviceImg
         };
         console.log(eventData)
-        const url = `http://localhost:8080/addService`;
+        const url = `https://plumbing-com.herokuapp.com/addService`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -27,13 +29,11 @@ const AddService = () => {
             .then(res => res.json())
             .then(data => {
                 if (data) {
-                    history.push('/');
+                    alert('New Service Successfully Added');
+                    history.push('/dashboard');
                 }
             })
     };
-
-
-    const history = useHistory();
 
     const handleProductImageUpload = event => {
         console.log(event.target.files[0]);
@@ -54,6 +54,7 @@ const AddService = () => {
         <div className="Details">
             <div className="Box">
                 <form className="AddServiceForm" onSubmit={handleSubmit(onSubmit)}>
+                    <h3 style={{ color: '#6b7c93' }}>Add New Service</h3>
                     <input placeholder="Service Name" name="name" {...register("name")} />
                     <input placeholder="Des" name="description" {...register("description")} />
                     <input name="price" placeholder="Price" {...register("price", { required: true })} />

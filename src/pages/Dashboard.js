@@ -19,12 +19,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListOl, faPlus, faPencilAlt, faUserShield, faShoppingCart, faCommentDots, faHome, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 const Dashboard = () => {
+    document.title = 'Dashboard - Plumbing';
     let { path, url } = useRouteMatch();
-    const { user } = useAuth() || {};
+    const { user, authToken } = useAuth() || {};
     const [verifyStatus, setVerifyStatus] = useState([]);
 
     useEffect(() => {
-        fetch(`https://plumbing-com.herokuapp.com/verify-email-address?email=` + user?.email)
+        fetch(`https://plumbing-com.herokuapp.com/verify-email-address?email=` + user?.email, {
+            headers: {
+              "authorization": authToken
+            }
+          })
             .then(res => res.json())
             .then(data => {
                 if (data) {

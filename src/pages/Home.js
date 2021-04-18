@@ -8,6 +8,7 @@ import Blog from '../components/Blog/Blog';
 import Footer from '../components/Footer/Footer';
 
 const Home = () => {
+    document.title = 'Plumbing.Com | Plumbing Service!';
     return (
         <>
             <Header1 />

@@ -76,7 +76,7 @@ const SimpleCardForm = ({ handlePayment, waitingOrder }) => {
                     <input style={{ width: '90%' }} type="text" placeholder={user?.email} readOnly />
                     </label>
                     <label>Service You Want to Buy
-                    <input style={{ width: '90%' }} type="text" placeholder={waitingOrder?.name} readOnly />
+                    <input style={{ width: '90%' }} required type="text" placeholder={waitingOrder?.name} readOnly />
                     </label>
                 </div>
                 <div className="PayRight">

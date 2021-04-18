@@ -4,10 +4,15 @@ import CurrentOrders from './CurrentOrders';
 import './Customer.scss';
 
 const OrderList = () => {
-    const { user, signOut } = useAuth() || {};
+    document.title = 'Order List | Dashboard';
+    const { user, authToken } = useAuth() || {};
     const [userOrders, setUserOrders] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:8080/orderList?email=` + user?.email)
+        fetch(`https://plumbing-com.herokuapp.com/orderList?email=` + user?.email, {
+            headers: {
+              "authorization": authToken
+            }
+          })
             .then(res => res.json())
             .then(data => setUserOrders(data))
     }, [user])

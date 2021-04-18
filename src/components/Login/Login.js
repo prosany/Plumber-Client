@@ -4,7 +4,7 @@ import { useAuth } from '../../customHooks/useAuth';
 import Header1 from '../Header/Header1';
 
 const Login = () => {
-
+    document.title = 'Login - Plumbing.Com';
     const { error, googleSignIn} = useAuth() || {};
     return (
         <div>

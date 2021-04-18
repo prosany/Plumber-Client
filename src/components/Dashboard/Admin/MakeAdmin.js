@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useHistory } from 'react-router';
 
 const MakeAdmin = () => {
+    document.title = 'Make Admin | Dashboard';
     const [makeAdmin, setMakeAdmin] = useState(null);
     const [adminMail, setAdminMail] = useState(null);
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -20,7 +21,7 @@ const MakeAdmin = () => {
         if (adminMail === null || adminMail === undefined) {
             console.log("Please")
         } else {
-            const url = `http://localhost:8080/makeAdmin`;
+            const url = `https://plumbing-com.herokuapp.com/makeAdmin`;
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -32,7 +33,8 @@ const MakeAdmin = () => {
                 .then(data => {
                     if (data) {
                         setMakeAdmin(data);
-                        history.push('/');
+                        alert('Request To Make Admin Is Successful');
+                        history.push('/dashboard');
                     }
                 })
         }
@@ -42,6 +44,7 @@ const MakeAdmin = () => {
         <div className="Details">
             <div className="Box">
                 <form className="MakeAdminForm" onSubmit={handleSubmit(onSubmit)}>
+                    <h3 style={{color: '#6b7c93'}}>Make Admin</h3>
                     <label>Please enter your name</label>
                     <input type="text" {...register("name", { required: true })} />
                     {errors.email && <span className="FormError">Email field is required</span>}

@@ -11,7 +11,7 @@ const CurrentOrders = ({ currentOrder }) => {
                     <img src={image} alt="" />
                 </div>
                 {
-                    status === 'On Hold' ?
+                    status === 'On Going' ?
                         <>
                             <div className="CurrentStatusHold">
                                 <span>{status}</span>

@@ -4,9 +4,12 @@ import { useAuth } from '../../../customHooks/useAuth';
 import Rating from '@material-ui/lab/Rating';
 import Box from '@material-ui/core/Box';
 import './Customer.scss';
+import { useHistory } from 'react-router';
 
 const Reviews = () => {
+    document.title = 'Review | Dashboard';
     const { user } = useAuth() || {};
+    const history = useHistory();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [ratingValue, setRatingValue] = useState(4);
     const onSubmit = data => {
@@ -18,7 +21,7 @@ const Reviews = () => {
             rating: ratingValue
         };
         console.log(eventData)
-        const url = `http://localhost:8080/addReview`;
+        const url = `https://plumbing-com.herokuapp.com/addReview`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -27,7 +30,10 @@ const Reviews = () => {
             body: JSON.stringify(eventData)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                alert('Review Added Successful');
+                history.push('/dashboard');
+            })
     };
     return (
         <div className="Details">
@@ -40,7 +46,7 @@ const Reviews = () => {
                     <input placeholder="Company or Position" name="company" {...register("company", { required: true })} />
                     {errors.company && <span className="FormError">Company Name or Position field is required</span>}<br />
                     <label>Your Message</label>
-                    <textArea rows="6" placeholder="Message" name="review" {...register("review", { required: true })} />
+                    <textarea rows="6" placeholder="Message" name="review" {...register("review", { required: true })}></textarea>
                     {errors.review && <span className="FormError">Message field is required</span>}<br />
                     <label>Rate By Star</label>
                     <Box component="fieldset" mb={1} borderColor="transparent">

@@ -1,16 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import { useAuth } from '../../customHooks/useAuth';
 import ProcessPayment from './Payment/ProcessPayment';
 
 
 const Order = () => {
+    document.title = 'Order | Dashboard';
     const { id } = useParams();
+    const history = useHistory();
     const [waitingOrder, setWaitingOrder] = useState([]);
-    const { user } = useAuth() || {};
+    const { user, authToken } = useAuth() || {};
 
     useEffect(() => {
-        fetch(`http://localhost:8080/order/${id}`)
+        fetch(`https://plumbing-com.herokuapp.com/order/${id}`, {
+            headers: {
+                "authorization": authToken
+            }
+        })
             .then(res => res.json())
             .then(product => {
                 setWaitingOrder(product[0])
@@ -34,17 +40,18 @@ const Order = () => {
             orderTime: new Date()
         };
 
-        fetch('http://localhost:8080/confirmOrder', {
+        fetch('https://plumbing-com.herokuapp.com/confirmOrder', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(orderDetails)
         })
             .then(res => res.json())
             .then(data => {
                 if (data) {
-                    alert('your order placed successfully');
+                    alert('Your Order Placed successfully');
+                    history.push('/dashboard');
                 }
             })
     }

@@ -1,4 +1,5 @@
-.AddServiceForm, .MakeAdminForm {
+.AddServiceForm,
+.MakeAdminForm {
     width: 100%;
 
     label {
@@ -61,6 +62,7 @@
         border: 1px solid #e2e2e2;
         transition: all 150ms ease;
     }
+
     .FormError {
         color: #cf0000;
         font-size: 14px;
@@ -118,7 +120,88 @@
             width: 12%;
         }
     }
+
     .OListLi:last-child {
         border-bottom: 1px solid #f2f2f2;
+    }
+}
+
+
+.PendingStatus {
+    background: #ff686873;
+    color: #670000 !important;
+}
+
+.OnGoingStatus {
+    background: #fff56873;
+    color: #807300 !important;
+}
+
+.PendingStatus:focus,
+.OnGoingStatus:focus,
+.DoneStatus:focus .MuiSelect-select:focus option:nth-child(2),
+option:nth-child(3),
+option:last-child,
+.MuiInputBase-input:focus option:nth-child(2),
+option:nth-child(3),
+option:last-child,
+.MuiInput-input:focus option:nth-child(2),
+option:nth-child(3),
+option:last-child {
+    color: #000000 !important;
+}
+
+.DoneStatus {
+    background: #6dff6873;
+    color: #186700 !important;
+}
+
+
+
+
+// Delete Service
+.RemoveService {
+    width: 32%;
+    float: left;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+    overflow: hidden;
+    margin: 5px .5%;
+    padding: 10px 15px;
+    height: 175px;
+
+    .RemoveServiceList {
+        display: flex;
+        justify-content: space-between;
+
+        .RemoveServiceImage img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        .RemoveServiceBtn {
+            button {
+                background: #ff4656;
+                outline: none;
+                border: none;
+                margin: 0;
+                padding: 6px 9px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .RemoveServiceName {
+        h3 {
+            color: #305477;
+        }
+    }
+
+    .RemoveServiceDes {
+        p {
+            text-align: justify;
+        }
     }
 }
