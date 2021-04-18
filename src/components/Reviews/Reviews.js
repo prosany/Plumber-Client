@@ -3,11 +3,11 @@ import ReviewBody from './ReviewBody/ReviewBody';
 import './Reviews.scss';
 
 const Reviews = () => {
-    const [reviews, setReviews ] = useState([]);
+    const [reviews, setReviews] = useState([]);
     useEffect(() => {
         fetch('https://plumbing-com.herokuapp.com/reviews')
-        .then(res => res.json())
-        .then(data => setReviews(data))
+            .then(res => res.json())
+            .then(data => setReviews(data))
     }, [])
     return (
         <div className="Reviews" id="services">

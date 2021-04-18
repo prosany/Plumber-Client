@@ -199,13 +199,16 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .headerTwo-UserName {
         font-weight: 400;
+
         h4 {
             color: #111;
             display: inline;
         }
     }
+
     .headerTwo-UserEmail {
         a {
             color: #111;
@@ -218,22 +221,27 @@ nav a:hover {
     .headerTwo {
         line-height: 30px;
     }
+
     .HDR {
         display: block;
+
         .headerTwo-UserName {
             width: 100%;
             float: left;
             justify-content: space-between;
             padding: 8px 0;
             font-weight: 400;
+
             h4 {
                 color: #111;
                 display: inline;
             }
         }
+
         .headerTwo-UserEmail {
             display: block;
             padding: 8px 0;
+
             a {
                 color: #111;
                 margin-left: 10px;

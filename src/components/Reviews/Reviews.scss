@@ -7,30 +7,38 @@
     height: 180px;
     padding: 0px 10px;
 }
+
 .Review {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
+
 .CustomerImage img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
+
 .CustomerName h3 {
     color: #333;
 }
-.CustomerName h3, span {
+
+.CustomerName h3,
+span {
     line-height: 10px;
 }
+
 .CustomerName span {
     color: #757575;
     font-size: 12px;
-} 
+}
+
 .ReviewMessage {
     margin: 10px 0;
 }
+
 .ReviewMessage p {
     color: #333;
     text-align: justify;
@@ -39,6 +47,7 @@
 .Rating {
     text-align: center;
 }
+
 .Rating span {
     color: #f9d34a;
     margin: 0 1px 0 1px;
@@ -59,12 +68,14 @@ fieldset {
         height: 200px;
     }
 }
+
 @media (max-width: 830px) {
     .ReviewBody {
         width: 48%;
         height: 190px;
     }
 }
+
 @media (max-width: 520px) {
     .ReviewBody {
         width: 98%;

@@ -60,7 +60,7 @@ const SimpleCardForm = ({ handlePayment, waitingOrder }) => {
             setPaymentSuccess(paymentMethod.id, paymentMethod.card.brand, paymentMethod.card.last4, paymentMethod.card.exp_month, paymentMethod.card.exp_year);
             setPaymentError(null);
             handlePayment(paymentMethod);
-            console.log('[PaymentMethod]', paymentMethod);
+            // console.log('[PaymentMethod]', paymentMethod);
         }
     };
 
@@ -86,16 +86,16 @@ const SimpleCardForm = ({ handlePayment, waitingOrder }) => {
                         <CardNumberElement
                             options={options}
                             onReady={() => {
-                                console.log("CardNumberElement [ready]");
+                                // console.log("CardNumberElement [ready]");
                             }}
                             onChange={event => {
-                                console.log("CardNumberElement [change]", event);
+                                // console.log("CardNumberElement [change]", event);
                             }}
                             onBlur={() => {
-                                console.log("CardNumberElement [blur]");
+                                // console.log("CardNumberElement [blur]");
                             }}
                             onFocus={() => {
-                                console.log("CardNumberElement [focus]");
+                                // console.log("CardNumberElement [focus]");
                             }}
                         />
                     </label>
@@ -104,16 +104,16 @@ const SimpleCardForm = ({ handlePayment, waitingOrder }) => {
                         <CardExpiryElement
                             options={options}
                             onReady={() => {
-                                console.log("CardNumberElement [ready]");
+                                // console.log("CardNumberElement [ready]");
                             }}
                             onChange={event => {
-                                console.log("CardNumberElement [change]", event);
+                                // console.log("CardNumberElement [change]", event);
                             }}
                             onBlur={() => {
-                                console.log("CardNumberElement [blur]");
+                                // console.log("CardNumberElement [blur]");
                             }}
                             onFocus={() => {
-                                console.log("CardNumberElement [focus]");
+                                // console.log("CardNumberElement [focus]");
                             }}
                         />
                     </label>
@@ -122,16 +122,16 @@ const SimpleCardForm = ({ handlePayment, waitingOrder }) => {
                         <CardCvcElement
                             options={options}
                             onReady={() => {
-                                console.log("CardNumberElement [ready]");
+                                // console.log("CardNumberElement [ready]");
                             }}
                             onChange={event => {
-                                console.log("CardNumberElement [change]", event);
+                                // console.log("CardNumberElement [change]", event);
                             }}
                             onBlur={() => {
-                                console.log("CardNumberElement [blur]");
+                                // console.log("CardNumberElement [blur]");
                             }}
                             onFocus={() => {
-                                console.log("CardNumberElement [focus]");
+                                // console.log("CardNumberElement [focus]");
                             }}
                         />
                     </label>

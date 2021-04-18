@@ -89,7 +89,7 @@
 
 .ReviewForm {
     width: 100%;
-    
+
     label {
         color: #6b7c93;
         font-weight: 400;
@@ -151,6 +151,7 @@
         transition: all 150ms ease;
     }
 }
+
 .FormError {
     color: #cf0000;
     font-size: 14px;
@@ -167,11 +168,13 @@
 
 
 
-@media (max-width: 1080px){
+@media (max-width: 1080px) {
     .UserCurrentOrderList {
         width: 49%;
     }
+
     .ReviewForm {
+
         input,
         textarea {
             display: block;
@@ -186,11 +189,11 @@
             border-radius: 8px;
             background: white;
         }
-    
+
         input::placeholder {
             color: #aab7c4;
         }
-    
+
         input:focus,
         .StripeElement--focus {
             box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px,
@@ -201,7 +204,8 @@
         }
     }
 }
-@media (max-width: 524px){
+
+@media (max-width: 524px) {
     .UserCurrentOrderList {
         width: 99%;
     }

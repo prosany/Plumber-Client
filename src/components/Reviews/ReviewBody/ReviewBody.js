@@ -6,7 +6,7 @@ const ReviewBody = ({ review }) => {
     return (
         <>
             <div className="ReviewBody">
-                <div className="Review">
+                <divF className="Review">
                     <div className="CustomerImage">
                         <img src={review?.image} alt={review?.CustomerName} />
                     </div>
@@ -14,7 +14,7 @@ const ReviewBody = ({ review }) => {
                         <h3>{review?.CustomerName}</h3>
                         <span>{review?.company}</span>
                     </div>
-                </div>
+                </divF>
                 <div className="ReviewMessage">
                     <p>{review?.description}</p>
                 </div>

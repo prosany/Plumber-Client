@@ -20,7 +20,6 @@ const Order = () => {
             .then(res => res.json())
             .then(product => {
                 setWaitingOrder(product[0])
-                console.log(product)
             })
     }, [id]);
     // console.log(waitingOrder)

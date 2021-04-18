@@ -20,7 +20,7 @@ const Reviews = () => {
             image: user.photo,
             rating: ratingValue
         };
-        console.log(eventData)
+        // console.log(eventData)
         const url = `https://plumbing-com.herokuapp.com/addReview`;
         fetch(url, {
             method: 'POST',

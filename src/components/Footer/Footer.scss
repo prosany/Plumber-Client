@@ -1,6 +1,6 @@
 .Footer {
     width: 100%;
-    background: linear-gradient(to right,#023467, #024771, #056D94, #048AA7);
+    background: linear-gradient(to right, #023467, #024771, #056D94, #048AA7);
     overflow: hidden;
     padding: 30px 0;
 }
@@ -10,6 +10,7 @@
     float: left;
     width: 30%;
 }
+
 .FooterAddress h4 {
     color: #fdfdfd;
 }
@@ -18,7 +19,10 @@
     float: left;
     width: 20%;
 }
-.FooterCompany h3, .FooterQuickLink h3, .FooterAbout h3 {
+
+.FooterCompany h3,
+.FooterQuickLink h3,
+.FooterAbout h3 {
     color: #fdfdfd;
 }
 
@@ -28,9 +32,11 @@
 .FooterUl {
     list-style: none;
 }
+
 .FooterUl li {
     display: block;
 }
+
 .FooterUl li a {
     color: #fdfdfd;
     text-decoration: none;
@@ -46,17 +52,21 @@
     float: left;
     width: 20%;
 }
+
 .FooterAbout {
     float: left;
     width: 30%;
 }
+
 .FooterAbout p {
     color: #fdfdfd;
 }
+
 .FooterSocial {
     margin: 5px 0;
     text-align: center;
 }
+
 .FooterSocial span {
     color: #fdfdfd;
     margin: 0 6px;
@@ -72,36 +82,43 @@
         width: 60%;
         float: left;
     }
+
     .FooterCompany {
         width: 40%;
         float: left;
     }
+
     .FooterQuickLink {
         width: 40%;
         float: left;
         margin-top: 10px;
     }
+
     .FooterAbout {
         float: left;
         width: 60%;
         margin-top: 10px;
     }
 }
+
 @media (max-width: 515px) {
     .FooterAddress {
         width: 100%;
         float: left;
     }
+
     .FooterCompany {
         width: 100%;
         float: left;
         margin-top: 15px;
     }
+
     .FooterQuickLink {
         width: 100%;
         float: left;
         margin-top: 15px;
     }
+
     .FooterAbout {
         float: left;
         width: 100%;

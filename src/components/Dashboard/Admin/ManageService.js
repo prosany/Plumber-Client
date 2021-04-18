@@ -10,7 +10,7 @@ const ManageService = () => {
             .then(res => res.json())
             .then(data => {
                 setManageOrder(data)
-                console.log('Fetch', data)
+                // console.log('Fetch', data)
             })
     }, [])
 

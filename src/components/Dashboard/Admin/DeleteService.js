@@ -8,7 +8,7 @@ const DeleteService = ({ productDelete }) => {
     const history = useHistory();
 
     const deleteService = id => {
-        console.log(id)
+        // console.log(id)
         const url = `https://plumbing-com.herokuapp.com/manageService/${id}`;
         fetch(url, {
             method: 'DELETE'

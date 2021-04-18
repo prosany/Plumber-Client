@@ -18,11 +18,11 @@ const OrderList = () => {
             .then(data => {
                 setOrdersList(data)
                 setUpdatedValue(false)
-                console.log('Fetch', data)
+                // console.log('Fetch', data)
             })
     }, [updatedValue])
 
-    console.log('Id Token', authToken)
+    // console.log('Id Token', authToken)
     const [state, setState] = React.useState({
         status: ''
     });
@@ -55,10 +55,10 @@ const OrderList = () => {
                     if (data) {
                         setUpdatedValue(true)
                     }
-                    console.log(data)
+                    // console.log(data)
                 })
         }
-        console.log(updateNewStatus)
+        // console.log(updateNewStatus)
     }
     return (
         <div className="Details">

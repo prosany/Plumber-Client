@@ -63,7 +63,7 @@ const Dashboard = () => {
                                 <Link to={`${url}/order-list`}><span><FontAwesomeIcon icon={faListOl} /></span>Order List</Link>
                                 <Link to={`${url}/review`}><span><FontAwesomeIcon icon={faCommentDots} /></span>Review</Link>
                             </> : ''}
-                            {verifyStatus.length === 0 && <div className="loadingCss"></div>}
+                            {verifyStatus?.length === 0 && <div className="loadingCss"></div>}
                         </div>
                         <div className="GoBackHome">
                             <h3><span><FontAwesomeIcon icon={faExclamationTriangle} /></span>Quick Link</h3>
@@ -74,6 +74,26 @@ const Dashboard = () => {
                 <div className="Details">
                     <Header2 />
                     <br />
+                    <div className="Box">
+                        {
+                            verifyStatus?.length === 0 ? <div class="SKLodaer"></div> :
+                                <>
+                                    <div className="UserDashInfo">
+                                        <div className="UserPP">
+                                            <img src={verifyStatus?.photo} alt={verifyStatus?.name} />
+                                        </div>
+                                        <div className="UserName">
+                                            <h2>{verifyStatus?.name}</h2>
+                                            <p>{verifyStatus?.email}</p>
+                                            <p className="UserPeram">Permission: {verifyStatus?.permission}</p>
+                                        </div>
+                                    </div>
+                                </>
+                        }
+                    </div>
+                    <div className="GoHome">
+                        <Link to="/"><span><FontAwesomeIcon icon={faHome} /></span></Link>
+                    </div>
                 </div>
             </main>
             <Switch>

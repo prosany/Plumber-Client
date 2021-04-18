@@ -85,7 +85,6 @@ export const Auth = () => {
     if (verifyEmail === false) {
       // console.log('No Error Dise')
     } else {
-      console.log('Asci')
       fetch(`https://plumbing-com.herokuapp.com/verify-email-address?email=` + user?.email, {
         headers: {
           "authorization": authToken
@@ -96,7 +95,7 @@ export const Auth = () => {
           if (data) {
             setVerifyStatus(data[0])
           } else {
-            console.log("Nothing")
+            // console.log("Nothing")
           }
         })
     }
@@ -117,7 +116,7 @@ export const Auth = () => {
         .then(res => res.json())
         .then(data => {
           if (true) {
-            console.log(data)
+            // console.log(data)
           } else {
             console.log('Fail');
           }

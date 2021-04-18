@@ -32,6 +32,7 @@
     display: block;
     padding: 10px 0;
 }
+
 .MenuBar a span {
     margin-right: 8px;
     font-size: 15px;
@@ -46,6 +47,7 @@
 .GoBackHome a {
     color: #f3f4f5;
 }
+
 .GoBackHome span {
     margin-right: 8px;
     font-size: 15px;
@@ -69,15 +71,17 @@
 @media (max-width: 810px) {
     .SildeBar {
         position: static;
-    height: 110px;
-    overflow: hidden;
-    float: left;
-    width: 100%;
-    background: #171717;
+        height: 110px;
+        overflow: hidden;
+        float: left;
+        width: 100%;
+        background: #171717;
     }
+
     .WebsiteLogo {
-        width: 120px!important;
+        width: 120px !important;
     }
+
     .DashLogo {
         background: url('../images/logo-white.svg');
         background-repeat: no-repeat;
@@ -87,27 +91,126 @@
         margin: 0;
         overflow: hidden;
     }
+
     .MenuBar {
         text-align: left;
         overflow: hidden;
     }
-    
+
     .MenuBar a {
         color: #f3f4f5;
         display: inline-block;
         padding: 5px 8px;
         font-size: 15px;
     }
+
     .MenuBar a span {
         margin-right: 8px;
         font-size: 13px;
     }
+
     .GoBackHome {
         display: none;
     }
+
     .Details {
         margin-left: 0;
         width: 100%;
         height: auto;
+    }
+
+    .GoHome {
+        display: block;
+    }
+}
+
+
+
+
+.UserDashInfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 0 0 10px 0;
+    justify-content: space-between;
+
+    .UserPP img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .UserName .UserPeram {
+        text-transform: capitalize;
+    }
+}
+
+
+
+.GoHome {
+    position: fixed;
+    display: none;
+    right: 5%;
+    bottom: 5%;
+    background: rgba($color: #ff3636, $alpha: 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.GoHome a {
+    color: #fff;
+}
+
+.SKLodaer:empty {
+    margin: auto;
+    width: 100%;
+    height: 150px;
+    /* change height to see repeat-y behavior */
+
+    background-image:
+        radial-gradient(circle 50px at 50px 50px, #e2e2e2 99%, transparent 0),
+        linear-gradient(100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%),
+        linear-gradient(#e2e2e2 20px, transparent 0),
+        linear-gradient(#e2e2e2 20px, transparent 0),
+        linear-gradient(#e2e2e2 20px, transparent 0);
+
+    background-repeat: repeat-y;
+
+    background-size:
+        100px 200px,
+        /* circle */
+        50px 200px,
+        /* highlight */
+        100% 100%,
+        100% 100%,
+        100% 100%;
+
+    background-position:
+        0 0,
+        /* circle */
+        0 0,
+        /* highlight */
+        120px 0,
+        120px 40px,
+        120px 80px,
+        120px 120px;
+
+    animation: shine 1s infinite;
+}
+
+@keyframes shine {
+    to {
+        background-position:
+            0 0,
+            100% 0,
+            /* move highlight to right */
+            120px 0,
+            120px 40px,
+            120px 80px,
+            120px 120px;
     }
 }

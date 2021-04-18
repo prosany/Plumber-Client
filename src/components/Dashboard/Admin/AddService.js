@@ -17,7 +17,6 @@ const AddService = () => {
             description: data.description,
             image: serviceImg
         };
-        console.log(eventData)
         const url = `https://plumbing-com.herokuapp.com/addService`;
         fetch(url, {
             method: 'POST',
@@ -36,7 +35,7 @@ const AddService = () => {
     };
 
     const handleProductImageUpload = event => {
-        console.log(event.target.files[0]);
+        // console.log(event.target.files[0]);
         const imageData = new FormData();
         imageData.set('key', '217e4a7b8abfe51f2a79a5865e0b806a');
         imageData.append('image', event.target.files[0]);
@@ -49,7 +48,6 @@ const AddService = () => {
                 console.log(error);
             });
     }
-    console.log(process.env)
     return (
         <div className="Details">
             <div className="Box">

@@ -19,7 +19,7 @@ const MakeAdmin = () => {
 
     useEffect(() => {
         if (adminMail === null || adminMail === undefined) {
-            console.log("Please")
+            // console.log()
         } else {
             const url = `https://plumbing-com.herokuapp.com/makeAdmin`;
             fetch(url, {
@@ -39,12 +39,12 @@ const MakeAdmin = () => {
                 })
         }
     }, [adminMail])
-    console.log(adminMail)
+    // console.log(adminMail)
     return (
         <div className="Details">
             <div className="Box">
                 <form className="MakeAdminForm" onSubmit={handleSubmit(onSubmit)}>
-                    <h3 style={{color: '#6b7c93'}}>Make Admin</h3>
+                    <h3 style={{ color: '#6b7c93' }}>Make Admin</h3>
                     <label>Please enter your name</label>
                     <input type="text" {...register("name", { required: true })} />
                     {errors.email && <span className="FormError">Email field is required</span>}

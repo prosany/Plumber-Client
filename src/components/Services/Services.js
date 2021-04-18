@@ -16,7 +16,7 @@ const Services = () => {
             <div className="Box">
                 <h2>Our Services</h2>
                 {services.length === 0 && <div className="loadingCss"></div>}
-                {
+ F               {
                     services.map(service => <ServiceArea key={service._id} service={service}></ServiceArea>)
                 }
             </div>
