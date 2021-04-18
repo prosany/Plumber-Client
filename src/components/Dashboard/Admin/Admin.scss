@@ -205,3 +205,95 @@ option:last-child {
         }
     }
 }
+
+
+
+.Deff img {
+    width: 150px;
+    height: 150px;
+}
+
+
+@media (max-width: 820px) {
+
+    .AddServiceForm,
+    .MakeAdminForm {
+        width: 100%;
+
+        input,
+        textarea {
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+
+    // Delete Service
+    .RemoveService {
+        width: 99%;
+        height: auto;
+    }
+}
+
+.OnlyResponsive {
+    display: none;
+}
+@media(max-width: 1160px) {
+    .OrdersLists {
+        width: 100%;
+        overflow: hidden;
+    
+        .OListLi {
+            list-style: none;
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            margin: 15px 0;
+            border: 1px solid #f2f2f2;
+    
+            li {
+                float: left;
+                border: 1px solid #f2f2f2;
+                padding: 10px 5px;
+                text-align: left;
+                border-bottom: none;
+            }
+    
+            li:first-child {
+                width: 100%;
+                border-right: 1px solid #f2f2f2;
+            }
+    
+            li:nth-child(2) {
+                width: 100%;
+                border-right: 1px solid #f2f2f2;
+            }
+    
+            li:nth-child(3) {
+                width: 100%;
+                border-right: 1px solid #f2f2f2;
+            }
+    
+            li:nth-child(4) {
+                width: 100%;
+                border-right: 1px solid #f2f2f2;
+            }
+    
+            li:last-child {
+                width: 100%;
+            }
+        }
+    
+        .OListLi:last-child {
+            border-bottom: none;
+        }
+    }
+    .ResponsiveHide {
+        display: none!important;
+    }
+    .OnlyResponsive {
+        display: block;
+    }
+}

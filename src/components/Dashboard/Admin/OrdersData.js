@@ -23,11 +23,11 @@ const OrdersData = ({ allOrdersList, handleChange, handleUpdate }) => {
 
         <>
             <ul className="OListLi">
-                <li>{name}</li>
-                <li>{email}</li>
-                <li>{allOrdersList.products.name}</li>
-                <li>{paymentCardBrand}</li>
-                <li>
+                <li><h4 className="OnlyResponsive">Customer Name</h4>{name}</li>
+                <li><h4 className="OnlyResponsive">Email</h4>{email}</li>
+                <li><h4 className="OnlyResponsive">Product Name</h4>{allOrdersList.products.name}</li>
+                <li><h4 className="OnlyResponsive">Payment Using</h4>{paymentCardBrand}</li>
+                <li><h4 className="OnlyResponsive">Order Status</h4>
                     <Select
                         native
                         value={status}

@@ -64,3 +64,50 @@
         color: #6b7c93;
     }
 }
+
+
+@media (max-width: 810px) {
+    .SildeBar {
+        position: static;
+    height: 110px;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    background: #171717;
+    }
+    .WebsiteLogo {
+        width: 120px!important;
+    }
+    .DashLogo {
+        background: url('../images/logo-white.svg');
+        background-repeat: no-repeat;
+        width: 140px;
+        height: 35px;
+        float: left;
+        margin: 0;
+        overflow: hidden;
+    }
+    .MenuBar {
+        text-align: left;
+        overflow: hidden;
+    }
+    
+    .MenuBar a {
+        color: #f3f4f5;
+        display: inline-block;
+        padding: 5px 8px;
+        font-size: 15px;
+    }
+    .MenuBar a span {
+        margin-right: 8px;
+        font-size: 13px;
+    }
+    .GoBackHome {
+        display: none;
+    }
+    .Details {
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+}

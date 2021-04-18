@@ -60,7 +60,8 @@ const Order = () => {
     return (
         <div className="Details">
             <div className="Box">
-                <ProcessPayment handlePayment={handlePaymentSuccess} waitingOrder={waitingOrder} />
+                {waitingOrder.length === 0 ? <div className="loadingCss"></div> : <ProcessPayment handlePayment={handlePaymentSuccess} waitingOrder={waitingOrder} />}
+
             </div>
         </div>
     );

@@ -18,6 +18,7 @@ import '../style/Global.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faListOl, faPlus, faPencilAlt, faUserShield, faShoppingCart, faCommentDots, faHome, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
+
 const Dashboard = () => {
     document.title = 'Dashboard - Plumbing';
     let { path, url } = useRouteMatch();
@@ -49,7 +50,6 @@ const Dashboard = () => {
                             <Link to={`${url}`}>
                                 <div className="DashLogo"></div>
                             </Link>
-
                         </div>
                         <div className="MenuBar">
                             {verifyStatus?.permission === 'admin' ? <>
@@ -63,6 +63,7 @@ const Dashboard = () => {
                                 <Link to={`${url}/order-list`}><span><FontAwesomeIcon icon={faListOl} /></span>Order List</Link>
                                 <Link to={`${url}/review`}><span><FontAwesomeIcon icon={faCommentDots} /></span>Review</Link>
                             </> : ''}
+                            {verifyStatus.length === 0 && <div className="loadingCss"></div>}
                         </div>
                         <div className="GoBackHome">
                             <h3><span><FontAwesomeIcon icon={faExclamationTriangle} /></span>Quick Link</h3>

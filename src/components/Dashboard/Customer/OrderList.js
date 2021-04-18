@@ -10,16 +10,16 @@ const OrderList = () => {
     useEffect(() => {
         fetch(`https://plumbing-com.herokuapp.com/orderList?email=` + user?.email, {
             headers: {
-              "authorization": authToken
+                "authorization": authToken
             }
-          })
+        })
             .then(res => res.json())
             .then(data => setUserOrders(data))
     }, [user])
     return (
         <div className="Details">
             <div className="Box">
-                <h3 className="TotalOrderCount">Total Order: {userOrders?.length}</h3>
+                {userOrders.length === 0 ? <div className="loadingCss"></div> : <h3 className="TotalOrderCount">Total Order: {userOrders?.length}</h3>}
                 {
                     userOrders.map(currentOrder => <CurrentOrders key={currentOrder._id} currentOrder={currentOrder}></CurrentOrders>)
                 }

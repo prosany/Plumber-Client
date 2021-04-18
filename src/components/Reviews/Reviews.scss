@@ -44,6 +44,14 @@
     margin: 0 1px 0 1px;
 }
 
+fieldset {
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+.ReviewBody:hover fieldset {
+    transition: transform 1.2s;
+    transform: rotateX(360deg) rotateZ(0deg);
+}
 
 
 @media (max-width: 940px) {

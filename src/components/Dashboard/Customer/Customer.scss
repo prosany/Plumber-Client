@@ -159,3 +159,50 @@
     margin-top: -5px 0;
     display: block;
 }
+
+
+
+
+
+
+
+
+@media (max-width: 1080px){
+    .UserCurrentOrderList {
+        width: 49%;
+    }
+    .ReviewForm {
+        input,
+        textarea {
+            display: block;
+            margin: 8px 0 20px 0;
+            min-width: 100%;
+            max-width: 100%;
+            padding: 8px 14px;
+            font-size: 16px;
+            font-family: "Source Code Pro", monospace;
+            border: 1px solid #cccccc;
+            outline: 0;
+            border-radius: 8px;
+            background: white;
+        }
+    
+        input::placeholder {
+            color: #aab7c4;
+        }
+    
+        input:focus,
+        .StripeElement--focus {
+            box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px,
+                rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
+            -webkit-transition: all 150ms ease;
+            border: 1px solid #e2e2e2;
+            transition: all 150ms ease;
+        }
+    }
+}
+@media (max-width: 524px){
+    .UserCurrentOrderList {
+        width: 99%;
+    }
+}

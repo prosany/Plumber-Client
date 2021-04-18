@@ -13,6 +13,7 @@ const Reviews = () => {
         <div className="Reviews" id="services">
             <div className="Box">
                 <h2>Testimonials</h2>
+                {reviews.length === 0 && <div className="loadingCss"></div>}
                 {
                     reviews.map(review => <ReviewBody key={review._id} review={review}></ReviewBody>)
                 }

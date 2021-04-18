@@ -189,8 +189,6 @@ nav a:hover {
 
 
 
-
-
 .headerTwo {
     background: #b1d8ff;
     width: 100%;
@@ -212,6 +210,34 @@ nav a:hover {
         a {
             color: #111;
             margin-left: 10px;
+        }
+    }
+}
+
+@media(max-width: 850px) {
+    .headerTwo {
+        line-height: 30px;
+    }
+    .HDR {
+        display: block;
+        .headerTwo-UserName {
+            width: 100%;
+            float: left;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-weight: 400;
+            h4 {
+                color: #111;
+                display: inline;
+            }
+        }
+        .headerTwo-UserEmail {
+            display: block;
+            padding: 8px 0;
+            a {
+                color: #111;
+                margin-left: 10px;
+            }
         }
     }
 }

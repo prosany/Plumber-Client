@@ -17,7 +17,7 @@ const ManageService = () => {
     return (
         <div className="Details">
             <div className="Box">
-                <h3 style={{ color: '#6b7c93' }}>Manage Services</h3>
+                {manageOrder.length === 0 ? <div className="loadingCss"></div> : <h3 style={{ color: '#6b7c93' }}>Manage Services</h3>}
                 {
                     manageOrder.map(productDelete => <DeleteService key={productDelete._id} productDelete={productDelete}></DeleteService>)
                 }

@@ -63,15 +63,18 @@ const OrderList = () => {
     return (
         <div className="Details">
             <div className="Box">
-                <h3 style={{ color: '#6b7c93' }}>Total Order: {ordersList?.length}</h3>
                 <div className="OrdersLists">
-                    <ul className="OListLi">
-                        <li>Name</li>
-                        <li>Email</li>
-                        <li>Service</li>
-                        <li>Payment with</li>
-                        <li>Status</li>
-                    </ul>
+                    {ordersList.length === 0 ? <div className="loadingCss"></div> : <>
+                        <h3 style={{ color: '#6b7c93' }}>Total Order: {ordersList?.length}</h3>
+                        <ul className="OListLi ResponsiveHide">
+                            <li>Name</li>
+                            <li>Email</li>
+                            <li>Service</li>
+                            <li>Payment with</li>
+                            <li>Status</li>
+                        </ul>
+                    </>}
+
                     {ordersList.map(allOrdersList => <OrdersData handleUpdate={handleUpdate} key={allOrdersList._id} handleChange={handleChange} allOrdersList={allOrdersList}></OrdersData>)}
                 </div>
             </div>

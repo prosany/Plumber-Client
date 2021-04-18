@@ -7,13 +7,16 @@
     box-sizing: border-box;
     text-rendering: optimizeSpeed;
 }
+
 body {
     font-family: 'Lato', sans-serif;
 }
+
 .Box {
     width: 90%;
     margin: 0 auto;
 }
+
 a {
     text-decoration: none;
 }
@@ -22,9 +25,10 @@ a {
 
 // Home Page style
 .HeroBackground {
-    background: linear-gradient(to right,#023467, #024771, #056D94, #048AA7);
+    background: linear-gradient(to right, #023467, #024771, #056D94, #048AA7);
     height: 400px;
 }
+
 .HeroText {
     font-family: 'Mukta', sans-serif;
     text-transform: uppercase;
@@ -32,26 +36,33 @@ a {
     width: 60%;
     padding: 25px 0 10px 0;
 }
-.HeroText > h1, h3 {
+
+.HeroText>h1,
+h3 {
     font-weight: 800;
     color: #fff;
     line-height: 35px;
 }
-.HeroText > h1 {
+
+.HeroText>h1 {
     font-size: 50px;
 }
-.HeroText > h3 {
+
+.HeroText>h3 {
     font-size: 30px;
 }
+
 .BigOffer {
     margin: 20px 0 10px 0;
 }
-.BigOffer > h1 {
+
+.BigOffer>h1 {
     color: #f9d34a;
     text-transform: capitalize;
     margin: 10px 0;
 }
-.BigOffer > h1 > span {
+
+.BigOffer>h1>span {
     color: #ebfbff;
     font-size: 20px;
 }
@@ -60,13 +71,16 @@ a {
 .Feature {
     margin: 15px 0 10px 0;
 }
+
 .Feature ul {
     list-style: none;
 }
+
 .Feature ul li {
     color: #fff;
     text-transform: capitalize;
 }
+
 .Feature ul li span {
     color: #f9d34a;
     margin-right: 8px;
@@ -76,6 +90,7 @@ a {
 .RequestAnApp {
     margin: 15px 0 10px 0;
 }
+
 .RequestAnApp a {
     background: #E4424D;
     padding: 5px 20px;
@@ -92,6 +107,7 @@ a {
     width: 40%;
     padding: 35px 0 10px 0;
 }
+
 .HeroImage img {
     width: 80%;
     height: auto;
@@ -103,98 +119,124 @@ a {
     .HeroImage {
         padding: 60px 0 10px 0;
     }
+
     .HeroImage img {
         width: 100%;
     }
 }
+
 @media (max-width: 985px) {
     .HeroImage {
         padding: 60px 0 10px 0;
         margin-top: 30px;
     }
 }
+
 @media (max-width: 955px) {
     .HeroBackground {
         height: 360px;
     }
+
     .HeroText {
         width: 55%;
         overflow: hidden;
     }
+
     .HeroImage {
         width: 45%;
         padding: 40px 0 10px 0;
         margin-top: 20px;
     }
+
     .HeroImage img {
         width: 90%;
     }
-    .HeroText > h1, h3 {
+
+    .HeroText>h1,
+    h3 {
         line-height: 25px;
     }
-    .HeroText > h1 {
+
+    .HeroText>h1 {
         font-size: 35px;
     }
-    .HeroText > h3 {
+
+    .HeroText>h3 {
         font-size: 20px;
     }
 }
+
 @media (max-width: 745px) {
     .HeroBackground {
         height: 360px;
     }
+
     .HeroText {
         width: 55%;
         overflow: hidden;
     }
+
     .HeroImage {
         width: 45%;
         overflow: hidden;
     }
-    .BigOffer > h1 {
+
+    .BigOffer>h1 {
         font-size: 20px;
     }
-    .BigOffer > h1 > span {
+
+    .BigOffer>h1>span {
         color: #ebfbff;
         font-size: 15px;
     }
 }
+
 @media (max-width: 730px) {
     .HeroBackground {
         height: 340px;
     }
-    .HeroText > h1, h3 {
+
+    .HeroText>h1,
+    h3 {
         line-height: 20px;
     }
-    .HeroText > h1 {
+
+    .HeroText>h1 {
         font-size: 30px;
     }
-    .HeroText > h3 {
+
+    .HeroText>h3 {
         font-size: 18px;
     }
 }
+
 @media (max-width: 630px) {
     .HeroBackground {
         height: 660px;
     }
+
     .HeroText {
         width: 100%;
         overflow: hidden;
     }
+
     .HeroImage {
         width: 100%;
         padding: 10px 0 10px 0;
         margin-top: 10px;
         text-align: center;
     }
+
     .HeroImage img {
         width: 70%;
     }
 }
+
 @media (max-width: 630px) {
     .HeroBackground {
         height: 610px;
     }
+
     .HeroImage img {
         width: 80%;
     }
@@ -202,13 +244,20 @@ a {
 
 
 // WhyChooseUs Section
-.WhyChooseUs, .Services, .Reviews, .Blog {
+.WhyChooseUs,
+.Services,
+.Reviews,
+.Blog {
     width: 100%;
     overflow: hidden;
     text-align: center;
     margin: 20px 0;
 }
-.WhyChooseUs h2, .Services h2, .Reviews h2, .Blog h2 {
+
+.WhyChooseUs h2,
+.Services h2,
+.Reviews h2,
+.Blog h2 {
     font-weight: 700;
     text-transform: uppercase;
     font-family: 'Mukta', sans-serif;
@@ -231,6 +280,7 @@ a {
     font-weight: 700;
     color: rgba(0, 0, 0, 0.04);
 }
+
 .Services h2::after {
     content: "OUR SERVICES";
     display: block;
@@ -241,6 +291,7 @@ a {
     font-weight: 700;
     color: rgba(0, 0, 0, 0.04);
 }
+
 .Reviews h2::after {
     content: "BEST REVIEWS";
     display: block;
@@ -251,6 +302,7 @@ a {
     font-weight: 700;
     color: rgba(0, 0, 0, 0.04);
 }
+
 .Blog h2::after {
     content: "LATEST BLOG";
     display: block;
@@ -273,14 +325,17 @@ a {
         transform: translate(-50%, -87%);
         font-size: 32px;
     }
+
     .Services h2::after {
         transform: translate(-50%, -87%);
         font-size: 32px;
     }
+
     .Reviews h2::after {
         transform: translate(-50%, -87%);
         font-size: 32px;
     }
+
     .Blog h2::after {
         transform: translate(-50%, -87%);
         font-size: 32px;
@@ -297,6 +352,7 @@ a {
     margin: 20px 0;
     text-align: center;
 }
+
 .NotFound h1 {
     font-family: 'Mukta', sans-serif;
     font-weight: 700;
@@ -305,7 +361,51 @@ a {
     color: #023467;
     margin-top: 10px;
 }
+
 .NotFound p {
     color: #333;
     margin-bottom: 10px;
+}
+
+
+
+
+// CSS Loader
+.loadingCss {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.loadingCss:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 25px solid #5a49f1;
+    border-color: #5a49f1 transparent #5a49f1 transparent;
+    animation: loadingCss 1.2s infinite;
+}
+
+@keyframes loadingCss {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    100% {
+        transform: rotate(1800deg);
+    }
 }
