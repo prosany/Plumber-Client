@@ -19,7 +19,8 @@ const OrderList = () => {
     return (
         <div className="Details">
             <div className="Box">
-                {userOrders.length === 0 ? <div className="loadingCss"></div> : <h3 className="TotalOrderCount">Total Order: {userOrders?.length}</h3>}
+                {userOrders === [] && <div className="loadingCss"></div>}
+                <h3 className="TotalOrderCount">Total Order: {userOrders?.length}</h3>
                 {
                     userOrders.map(currentOrder => <CurrentOrders key={currentOrder._id} currentOrder={currentOrder}></CurrentOrders>)
                 }
