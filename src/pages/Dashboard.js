@@ -27,9 +27,9 @@ const Dashboard = () => {
     useEffect(() => {
         fetch(`https://plumbing-com.herokuapp.com/verify-email-address?email=` + user?.email, {
             headers: {
-              "authorization": authToken
+                "authorization": authToken
             }
-          })
+        })
             .then(res => res.json())
             .then(data => {
                 if (data) {
@@ -72,7 +72,7 @@ const Dashboard = () => {
                 </div>
                 <div className="Details">
                     <Header2 />
-                    <br/>
+                    <br />
                 </div>
             </main>
             <Switch>
