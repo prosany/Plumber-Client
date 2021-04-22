@@ -136,7 +136,7 @@ export const Auth = () => {
         var user = result.user;
         setUser({ name: user.displayName, email: user.email, photo: user.photoURL });
         setVerifyEmail(true);
-        window.history.back();
+        window.history.back(-1);
         storeAuthToken()
 
       }).catch((error) => {

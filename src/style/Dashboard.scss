@@ -67,6 +67,21 @@
     }
 }
 
+.GoHome {
+    position: fixed;
+    display: none;
+    right: 5%;
+    bottom: 5%;
+    background: rgba($color: #ff3636, $alpha: 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.GoHome a {
+    color: #fff;
+}
+
 
 @media (max-width: 810px) {
     .SildeBar {
@@ -146,23 +161,6 @@
     .UserName .UserPeram {
         text-transform: capitalize;
     }
-}
-
-
-
-.GoHome {
-    position: fixed;
-    display: none;
-    right: 5%;
-    bottom: 5%;
-    background: rgba($color: #ff3636, $alpha: 0.8);
-    padding: 15px;
-    border-radius: 10px;
-    z-index: 9999;
-}
-
-.GoHome a {
-    color: #fff;
 }
 
 .SKLodaer:empty {

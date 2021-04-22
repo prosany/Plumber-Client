@@ -14,7 +14,7 @@ const ServiceArea = ({ service }) => {
                 <p>{service?.description}</p>
                 <div className="PriceAndOrder">
                     <div className="Price">
-         F               <h3>${service?.price}</h3>
+                        <h3>${service?.price}</h3>
                     </div>
                     <div className="Buy">
                         <button onClick={orderNow}>Order Now</button>

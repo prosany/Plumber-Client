@@ -24,7 +24,7 @@ const Order = () => {
     }, [id]);
     // console.log(waitingOrder)
 
-
+    
     const handlePaymentSuccess = paymentMethod => {
         const savedCart = waitingOrder;
         const orderDetails = {

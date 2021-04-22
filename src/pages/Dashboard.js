@@ -76,7 +76,7 @@ const Dashboard = () => {
                     <br />
                     <div className="Box">
                         {
-                            verifyStatus?.length === 0 ? <div class="SKLodaer"></div> :
+                            verifyStatus?.length === 0 ? <div className="SKLodaer"></div> :
                                 <>
                                     <div className="UserDashInfo">
                                         <div className="UserPP">
